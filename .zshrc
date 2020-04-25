@@ -175,3 +175,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.supercfg/ --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Please adapt and uncomment the following lines:
+#       name = Paweł Góra
+#       email = pawelgora@MacBook-Pro-13.local
