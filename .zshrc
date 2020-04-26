@@ -35,20 +35,20 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
-#libressl
-export PATH="/usr/local/opt/libressl/bin:$PATH"
+# #libressl
+# export PATH="/usr/local/opt/libressl/bin:$PATH"
 
-#bison
-export PATH="/usr/local/opt/bison/bin:$PATH"
+# #bison
+# export PATH="/usr/local/opt/bison/bin:$PATH"
 
-#openssl
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# #openssl
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-# export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+# # export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+# # export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
-# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include"
+# # export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
+# # export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include"
 
 # symlink openssl
 # ln -s /usr/local/opt/openssl@1.1/include/openssl /usr/local/include
@@ -119,13 +119,14 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  docker
   dotenv
+  git
   osx
+  pyenv
   rake
   rbenv
   ruby
-  pyenv
 )
 
 # User configuration
@@ -195,13 +196,28 @@ zplug load
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias l="ls -l"
+
+# The next gen ls command - https://github.com/Peltoche/lsd
+alias ls="lsd"
+
+alias l="ls -1"
 alias la="ls -a"
 alias lla="ls -la"
-alias ls="lsd"
 alias lt="ls --tree"
-alias weather="curl v2.wttr.in/Crewe"
-alias testcolors="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3"
+
+# Functions
+
+function weather() {
+  curl "https://v2.wttr.in/$1"
+}
+
+function cheatsheet() {
+  curl "https://cht.sh/$1"
+}
+
+# Other useful aliases
+
+alias testcolors="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
 alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
 
 # Manager .dotfiles

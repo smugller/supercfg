@@ -12,9 +12,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    //fontFamily: 'Hack Nerd Font',
-    //fontFamily: '"Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-    fontFamily: '"Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Firacode Nerd Font',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -38,7 +36,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -137,7 +135,7 @@ module.exports = {
 
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
-    //webGLRenderer: true,
+    // webGLRenderer: true,
     webGLRenderer: false,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
@@ -146,8 +144,8 @@ module.exports = {
 
     hyperline: {
       plugins: [
-        "hostname",
-        "ip",
+        //"hostname",
+        //"ip",
         "memory",
         "cpu",
         "network",
