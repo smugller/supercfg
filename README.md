@@ -1,5 +1,3 @@
-# Readme
-
 # Screenshot
 
 ![Hyper](https://i.imgur.com/YLQPIC6.png)
