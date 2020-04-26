@@ -8,22 +8,35 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
 export PATH=$HOME/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:$PATH
 export SHELL=/usr/local/bin/zsh
 
 # Path to your oh-my-zsh installation.
-#export ZSH="/Users/pawelgora/.oh-my-zsh"
+# export ZSH="/Users/pawelgora/.oh-my-zsh"
 export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="philips"
 #ZSH_THEME="gianu"
 
 # Set list of themes to pick from when loading at random
@@ -93,8 +106,6 @@ plugins=(
   rbenv
   ruby
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -170,12 +181,8 @@ alias lt="ls --tree"
 alias weather="curl v2.wttr.in/Crewe"
 
 # Manager .dotfiles
+# https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.supercfg/ --work-tree=$HOME'
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Please adapt and uncomment the following lines:
-#       name = Paweł Góra
-#       email = pawelgora@MacBook-Pro-13.local
