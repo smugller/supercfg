@@ -1,5 +1,9 @@
-# supercfg
+# Readme
+
+# Screenshot
 
 ![Hyper](https://i.imgur.com/YLQPIC6.png)
 
-Hyper + zsh + oh-my-zsh + zplug + plugins
+# Contact
+
+If you have any ideas or questions please contact with me somehow.
