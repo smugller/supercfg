@@ -105,6 +105,7 @@ plugins=(
   rake
   rbenv
   ruby
+  pyenv
 )
 
 # User configuration
