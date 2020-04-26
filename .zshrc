@@ -31,12 +31,33 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
+#phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
+#libressl
+export PATH="/usr/local/opt/libressl/bin:$PATH"
+
+#bison
+export PATH="/usr/local/opt/bison/bin:$PATH"
+
+#openssl
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+# export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
+# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include"
+
+# symlink openssl
+# ln -s /usr/local/opt/openssl@1.1/include/openssl /usr/local/include
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="philips"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="gianu"
 
 # Set list of themes to pick from when loading at random
@@ -99,7 +120,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bundler
   dotenv
   osx
   rake
@@ -149,8 +169,9 @@ fi
 source ~/.zplug/init.zsh
 
 # Make sure to use double quotes to prevent shell expansion
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplug "romkatv/powerlevel10k", as:theme, use:powerlevel10k.zsh-theme, depth:1
 zplug "zsh-users/zsh-completions"
+zplug "chrissicool/zsh-256color"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -180,6 +201,8 @@ alias lla="ls -la"
 alias ls="lsd"
 alias lt="ls --tree"
 alias weather="curl v2.wttr.in/Crewe"
+alias testcolors="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3"
+alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
 
 # Manager .dotfiles
 # https://www.atlassian.com/git/tutorials/dotfiles

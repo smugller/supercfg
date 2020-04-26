@@ -149,7 +149,6 @@ module.exports = {
         "hostname",
         "ip",
         "memory",
-        "Uptime",
         "cpu",
         "network",
         "battery",
@@ -184,8 +183,10 @@ module.exports = {
   //   `project#1.0.1`
 
   plugins: [
-    //"hyper-clean"
+    //"hyper-clean",
     //"hyper-blink",
+    "hyper-alt-click",
+    "hyper-always-on-top",
     "hyper-dark-scrollbar",
     "hyper-drop-file",
     "hyper-font-ligatures",
@@ -196,7 +197,6 @@ module.exports = {
     "hyperborder",
     "hyperline",
     "hyperlinks",
-    "hyper-always-on-top",
   ],
 
   // in development, you can create a directory under
