@@ -31,7 +31,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
-#phpenv
+# phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
@@ -171,8 +171,8 @@ source ~/.zplug/init.zsh
 
 # Make sure to use double quotes to prevent shell expansion
 zplug "romkatv/powerlevel10k", as:theme, use:powerlevel10k.zsh-theme, depth:1
-zplug "zsh-users/zsh-completions"
 zplug "chrissicool/zsh-256color"
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -207,17 +207,29 @@ alias lt="ls --tree"
 
 # Functions
 
+# check your weather putting city as parameter
 function weather() {
   curl "https://v2.wttr.in/$1"
 }
 
-function cheatsheet() {
+# cheat-sheet in terminal
+function cheat-sheet() {
   curl "https://cht.sh/$1"
+}
+
+# list all npm global packages
+function npm-global-variables() {
+  npm list -g --depth 0
+}
+
+#  glances - https://github.com/nicolargo/glances
+function system-info() {
+  glances
 }
 
 # Other useful aliases
 
-alias testcolors="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
+alias testcolors1="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
 alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
 
 # Manager .dotfiles

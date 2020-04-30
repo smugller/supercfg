@@ -1,0 +1,162 @@
+{
+    // Breadcrumbs
+    "breadcrumbs.enabled": false,
+    // Editor
+    "editor.cursorBlinking"         : "smooth",
+    "editor.cursorStyle"            : "line",
+    "editor.fontFamily"             : "FiraCode-Retina", // v3.1
+    "editor.fontLigatures"          : true,
+    "editor.fontSize"               : 13,
+    "editor.fontWeight"             : "300", // 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
+    "editor.lineHeight"             : 19,
+    "editor.minimap.enabled"        : true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace"       : "selection",
+    "editor.tabSize"                : 2,
+    "editor.wordWrap"               : "wordWrapColumn",
+    "editor.wordWrapColumn"         : 160,
+    "editor.tokenColorCustomizationsExperimental": {
+        // "class"  : "#ff0000",
+        // "comment": "#ff0000",
+        // "enum"   : "#ff0000",
+        // "keyword": "#ff0000",
+        // "string" : "#ff0000",
+        // "property": "#ff0000",
+        // "variable": "#ff0000"
+    },
+    "editor.tokenColorCustomizations": {
+        // "comments"            : "#636f82",
+        // "functions"           : "#00ff26",
+        // "keywords"            : "#ff00b7",
+        // "numbers"             : "#3700ff",
+        // "semanticHighlighting": true,
+        // "strings"             : "#ff8c00",
+        // "types"               : "#9d00ff",
+        // "variables"           : "#a6b738",
+    },
+    // File associations
+    "files.associations"          : {},
+    "files.defaultLanguage"       : "plaintext",
+    "files.trimFinalNewlines"     : true,
+    "files.trimTrailingWhitespace": true,
+    // Git
+    "git.autofetch"        : true,
+    "git.enableSmartCommit": true,
+    // Hihglight regexes plugin
+    "highlight.regexes": {
+        "(// ?TODO:?)(.*)": [
+            {
+                "backgroundColor"   : "#ffcc00",
+                "color"             : "#1f1f1f",
+                "fontWeight"        : "bold",
+                "overviewRulerColor": "#ffcc00"
+            },
+            {
+                "backgroundColor": "#d9ad00",
+                "color"          : "#1f1f1f"
+            }
+        ],
+        "(// ?FIXME:?)(.*)": [
+            {
+                "backgroundColor"   : "#ff0000",
+                "color"             : "#1f1f1f",
+                "fontWeight"        : "bold",
+                "overviewRulerColor": "#ff0000",
+            },
+            {
+                "backgroundColor": "#d90000",
+                "color"          : "#1f1f1f",
+            }
+        ],
+        "(// )(@\\w+)": [
+            {},
+            {
+                "color": "#4de0ff",
+            }
+        ]
+    },
+    // Indent Rainbow
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.07)",
+        "rgba(127,255,127,0.07)",
+        "rgba(255,127,255,0.07)",
+        "rgba(79,236,236,0.07)",
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+    "indentRainbow.excludedLanguages"   : [
+        "plaintext",
+    ],
+    "indentRainbow.ignoreErrorLanguages": [
+        "markdown",
+    ],
+    "indentRainbow.ignoreLinePatterns"  : [
+        "/[ \t]* [*]/g",
+        "/[ \t]+[/]{2}/g",
+    ],
+    "indentRainbow.includedLanguages": [],
+    "indentRainbow.indentSetter"     : {},
+    "indentRainbow.tabmixColor"      : "rgba(128,32,96,0.6)",
+    "indentRainbow.updateDelay"      : 100,
+    // Search
+    "search.exclude": {
+        "**/bower_components" : true,
+        "**/node_modules"     : true,
+        "*.min.js"            : true,
+        ".build/**"           : true,
+        "extensions/**/out/**": true,
+        "i18n/**"             : true,
+        "out*/**"             : true,
+    },
+    // Terminal
+    "terminal.external.osxExec"              : "Hyper.app",
+    "terminal.integrated.automationShell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.fontFamily"         : "FiraCode Nerd Font",
+    "terminal.integrated.fontSize"           : 12,
+    "terminal.integrated.lineHeight"         : 1,
+    "terminal.integrated.shell.osx"          : "/usr/local/bin/zsh",
+    // Window
+    "window.newWindowDimensions": "default",
+    "window.title"              : ".${dirty} .${dirty} .${dirty} .${dirty} .${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} .${dirty} .${dirty} .${dirty} .${dirty} .${dirty}",
+    "window.titleBarStyle"      : "custom",
+    "window.zoomLevel"          : -1,
+    // Workbench
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "editor.background"                    : "#1e2431",
+        //"editor.foreground"                    : "#ff0000",
+        "editor.hoverHighlightBackground"      : "#636f82",
+        //"editor.inactiveSelectionBackground"   : "#ff0000",
+        "editor.lineHighlightBackground"       : "#181e2b",
+        "editor.lineHighlightBorder"           : "#181e2b",
+        "editor.selectionBackground"           : "#636f82",
+        //"editor.selectionForeground"           : "#ff0000",
+        //"editor.selectionHighlightBackground"  : "#ff0000",
+        //"editor.selectionHighlightBorder"      : "#ff0000",
+        //"editor.stackFrameHighlightBackground" : "#ff0000",
+        //"editor.symbolHighlightBackground"     : "#ff0000",
+        //"editor.wordHighlightBackground"       : "#ff0000",
+        "sideBar.background"                   : "#1e2431",
+        "sideBar.border"                       : "#ffcb4f",
+        "sideBar.foreground"                   : "#636f82",
+        "sideBarSectionHeader.background"      : "#181e2b",
+        "sideBarSectionHeader.border"          : "#1e2431",
+        "sideBarSectionHeader.foreground"      : "#ffcb4f",
+        "terminal.background"                  : "#181e2b",
+        "terminal.foreground"                  : "#ffffff",
+        "terminalCursor.background"            : "#ffcb4f",
+        "terminalCursor.foreground"            : "#ffcb4f",
+        "titleBar.activeBackground"            : "#1e2431",
+        ""
+
+    },
+    "workbench.colorTheme"       : "Ayu Mirage",
+    "workbench.fontAliasing"     : "antialiased",
+    "workbench.iconTheme"        : "vscode-great-icons",
+    "workbench.sideBar.location" : "left",
+    "workbench.statusBar.visible": true,
+}
+// Kolory
+// #1e2431 - Tło
+// #636f82 - Szare tło
+// #ffcb4f - Żółte tło
+// #181e2b - Ciemny granat tło
