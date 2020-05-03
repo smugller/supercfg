@@ -1,4 +1,3 @@
-{
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //
     //   Author: Smugller
@@ -7,8 +6,423 @@
     //  Contact: ?
     //
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+{
+    // System Settings
 
-    // Better Align - Plugin _________________________
+    //---------------------------------------
+    // Breadcrumbs
+    //---------------------------------------
+    "breadcrumbs.enabled"           : false,
+
+    //---------------------------------------
+    // Editor
+    //---------------------------------------
+         // Cursor
+    "editor.cursorBlinking"         : "smooth",
+    "editor.cursorStyle"            : "line",
+         // Font
+    "editor.fontFamily"             : "FiraCode-Retina",   // v3.1
+    "editor.fontLigatures"          : true,
+    "editor.fontSize"               : 13,
+    "editor.fontWeight"             : "400",               // 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
+    "editor.letterSpacing"          : 0,
+    "editor.lineHeight"             : 19,
+         // General
+    "editor.lineNumbers"            : "on",
+    "editor.minimap.enabled"        : true,
+    "editor.minimap.scale"          : 2,
+    "editor.overviewRulerBorder"    : false,
+         // Render
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight"    : "all",
+    "editor.renderWhitespace"       : "selection",
+         // Scroll
+    "editor.scrollBeyondLastColumn" : 5,
+    "editor.scrollBeyondLastLine"   : true,
+    "editor.smoothScrolling"        : false,
+         // Snippets
+    "editor.snippetSuggestions"     : "top",
+        // Indentation
+    "editor.tabSize"                : 2,
+         // Word wrapping
+    "editor.wordWrap"               : "wordWrapColumn",
+    "editor.wordWrapColumn"         : 160,
+         // Tokens
+    "editor.tokenColorCustomizationsExperimental": {
+        // "class"         : "#ff0000",
+        // "comment"       : "#ff0000",
+        // "enum"          : "#ff0000",
+        // "enumMember"    : "#ff0000",
+        // "event"         : "#ff0000",
+        // "function"      : "#ff0000",
+        // "interface"     : "#ff0000",
+        // "keyword"       : "#ff0000",
+        // "label"         : "#ff0000",
+        // "macro"         : "#ff0000",
+        // "member"        : "#ff0000",
+        // "namespace"     : "#ff0000",
+        // "number"        : "#ff0000",
+        // "operator"      : "#ff0000",
+        // "parameter"     : "#ff0000",
+        // "property"      : "#ff0000",
+        // "regexp"        : "#ff0000",
+        // "string"        : "#ff0000",
+        // "struct"        : "#ff0000",
+        // "type"          : "#ff0000",
+        // "typeParameter" : "#ff0000",
+        // "variable"      : "#ff0000",
+    },
+    "editor.tokenColorCustomizations"            : {
+        "semanticHighlighting": true,
+        // "comments"            : "#ffffff",
+        // "functions"           : "#ffffff",
+        // "keywords"            : "#ffffff",
+        // "numbers"             : "#ffffff",
+        // "strings"             : "#ffffff",
+        // "types"               : "#ffffff",
+        // "variables"           : "#ffffff",
+        "textMateRules": [
+            {
+                "name": "Description",
+                "scope": "support.type.property-name",
+                "settings": {
+                    "foreground": "#BDBDBD",
+                }
+            },
+            {
+                "name": "Something",
+                "scope": [
+                    "constant.numeric",
+                    "constant.language",
+                ],
+                "settings": {
+                    "foreground": "#BAE67E",
+                    //"fontStyle": "bold"
+                }
+            }
+        ]
+    },
+
+    //---------------------------------------
+    // File associations
+    //---------------------------------------
+    "files.associations"          : {
+        ".env.jenkins"            : "dotenv",
+    },
+    "files.defaultLanguage"       : "plaintext",
+    "files.trimFinalNewlines"     : true,
+    "files.trimTrailingWhitespace": true,
+
+    //---------------------------------------
+    // Git
+    //---------------------------------------
+    "git.autofetch"               : true,
+    "git.enableSmartCommit"       : true,
+
+    //---------------------------------------
+    // Search
+    //---------------------------------------
+    "search.exclude": {
+        "**/bower_components" : true,
+        "**/node_modules"     : true,
+        "*.min.js"            : true,
+        ".build/**"           : true,
+        "extensions/**/out/**": true,
+        "i18n/**"             : true,
+        "out*/**"             : true,
+    },
+
+    //---------------------------------------
+    // Terminal
+    //---------------------------------------
+    "terminal.external.osxExec"              : "Hyper.app",
+    "terminal.integrated.automationShell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.fontFamily"         : "FiraCode Nerd Font",
+    "terminal.integrated.fontSize"           : 12,
+    "terminal.integrated.lineHeight"         : 1,
+    "terminal.integrated.shell.osx"          : "/usr/local/bin/zsh",
+
+    //---------------------------------------
+    // Window
+    //---------------------------------------
+    "window.newWindowDimensions": "default",
+    "window.title"              : ".${dirty} .${dirty} .${dirty} .${dirty} .${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} .${dirty} .${dirty} .${dirty} .${dirty} .${dirty}",
+    "window.titleBarStyle"      : "custom",
+    "window.zoomLevel"          : -1,
+
+    //---------------------------------------
+    // Workbench
+    //---------------------------------------
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme"         : "Ayu Mirage Bordered",
+    "workbench.editor.tabSizing"   : "shrink",
+    "workbench.fontAliasing"       : "antialiased",
+    "workbench.iconTheme"          : "vscode-great-icons",
+    "workbench.sideBar.location"   : "left",
+    "workbench.statusBar.visible"  : true,
+    "workbench.colorCustomizations": {
+          // Colors ------------------------------------------
+          //
+          // #1e2431 - Tło
+          // #636f82 - Szare tło
+          // #ffcb4f - Żółte tło
+          // #181e2b - Ciemny granat tło
+          //
+          // Editor ------------------------------------------
+          // ActivityBar
+            "activityBar.activeBackground"          : "#181e2b",
+            "activityBar.activeBorder"              : "#ffcb4f",
+            "activityBar.activeFocusBorder"         : "#181e2b",
+            "activityBar.background"                : "#181e2b",
+            "activityBar.border"                    : "#181e2b",
+            "activityBar.dropBackground"            : "#ff0000",
+            "activityBar.foreground"                : "#ffcb4f",
+            "activityBar.inactiveForeground"        : "#B0BEC5",
+            "activityBarBadge.background"           : "#B0BEC5",
+            "activityBarBadge.foreground"           : "#181e2b",
+
+            // Badge
+            "badge.background"                      : "#ff0000",
+            "badge.foreground"                      : "#ff0000",
+
+            // Button ------------------------------------------
+            "button.background"                     : "#ffcb4f",
+            "button.foreground"                     : "#181e2b",
+            "button.hoverBackground"                : "#ff0000",
+
+            // Editor ------------------------------------------
+            "editor.background"                     : "#222835",    // Background Color Editor
+            "editor.foreground"                     : "#ffffff",
+            "editor.hoverHighlightBackground"       : "#181e2b",
+            "editor.inactiveSelectionBackground"    : "#708090",
+            "editor.lineHighlightBackground"        : "#181e2b",
+            "editor.lineHighlightBorder"            : "#181e2b",
+            "editor.rangeHighlightBackground"       : "#ff0000",
+            "editor.selectionBackground"            : "#708090",
+            "editor.selectionForeground"            : "#ff0000",
+            "editor.selectionHighlightBackground"   : "#708090",
+            "editor.selectionHighlightBorder"       : "#708090",
+            "editor.stackFrameHighlightBackground"  : "#ff0000",
+            "editor.symbolHighlightBackground"      : "#ff0000",
+            "editor.wordHighlightBackground"        : "#ff0000",
+            "editor.wordHighlightBorder"            : "#ff0000",
+            "editor.wordHighlightStrongBackground"  : "#ff0000",
+            "editor.wordHighlightStrongBorder"      : "#ff0000",
+            "editor.rangeHighlightBorder"           : "#ff0000",
+
+            // CodeLens
+            "editorCodeLens.foreground"             : "#ff0000",
+
+            // Cursor
+            "editorCursor.background"               : "#ffcb4f",
+            "editorCursor.foreground"               : "#ffcb4f",
+
+            // Gutter
+            "editorGutter.addedBackground"          : "#ff0000",
+            "editorGutter.background"               : "#181e2b",
+            "editorGutter.commentRangeForeground"   : "#ff0000",
+            "editorGutter.deletedBackground"        : "#ff0000",
+            "editorGutter.modifiedBackground"       : "#ff0000",
+
+            // Line
+            "editorLineNumber.activeForeground"     : "#ffcb4f",
+            "editorLineNumber.foreground"           : "#B0BEC5",
+
+            // Indent
+            "editorIndentGuide.activeBackground"    : "#222835",
+            "editorIndentGuide.background"          : "#222835",
+
+            // Bracket
+            "editorBracketMatch.background"         : "#222835",
+            "editorBracketMatch.border"             : "#ffcb4f",
+
+            // Group Header
+            "editorGroup.border"                    : "#ff0000",
+            "editorGroup.dropBackground"            : "#ff0000",
+            "editorGroup.emptyBackground"           : "#ff0000",
+            "editorGroup.focusedEmptyBorder"        : "#ff0000",
+            "editorGroupHeader.noTabsBackground"    : "#ff0000",
+            "editorGroupHeader.tabsBackground"      : "#181e2b",
+            "editorGroupHeader.tabsBorder"          : "#222835",
+
+            // Overwiew Ruler
+            "editorOverviewRuler.addedForeground"              : "#ff0000",
+            "editorOverviewRuler.border"                       : "#ff0000",
+            "editorOverviewRuler.bracketMatchForeground"       : "#ff0000",
+            "editorOverviewRuler.commonContentForeground"      : "#ff0000",
+            "editorOverviewRuler.currentContentForeground"     : "#ff0000",
+            "editorOverviewRuler.deletedForeground"            : "#ff0000",
+            "editorOverviewRuler.errorForeground"              : "#ff0000",
+            "editorOverviewRuler.findMatchForeground"          : "#ff0000",
+            "editorOverviewRuler.incomingContentForeground"    : "#ff0000",
+            "editorOverviewRuler.infoForeground"               : "#ff0000",
+            "editorOverviewRuler.modifiedForeground"           : "#ff0000",
+            "editorOverviewRuler.rangeHighlightForeground"     : "#ff0000",
+            "editorOverviewRuler.selectionHighlightForeground" : "#ff0000",
+            "editorOverviewRuler.warningForeground"            : "#ff0000",
+            "editorOverviewRuler.wordHighlightForeground"      : "#ff0000",
+            "editorOverviewRuler.wordHighlightStrongForeground": "#ff0000",
+
+            // Peek View
+            "peekView.border"                                  : "#ff0000",
+            "peekViewEditor.background"                        : "#ff0000",
+            "peekViewEditor.matchHighlightBackground"          : "#ff0000",
+            "peekViewEditor.matchHighlightBorder"              : "#ff0000",
+            "peekViewEditorGutter.background"                  : "#ff0000",
+            "peekViewResult.background"                        : "#ff0000",
+            "peekViewResult.fileForeground"                    : "#ff0000",
+            "peekViewResult.lineForeground"                    : "#ff0000",
+            "peekViewResult.matchHighlightBackground"          : "#ff0000",
+            "peekViewResult.selectionBackground"               : "#ff0000",
+            "peekViewResult.selectionForeground"               : "#ff0000",
+            "peekViewTitle.background"                         : "#ff0000",
+            "peekViewTitleDescription.foreground"              : "#ff0000",
+            "peekViewTitleLabel.foreground"                    : "#ff0000",
+
+            // List
+            "list.activeSelectionBackground"        : "#ffcb4f",
+            "list.activeSelectionForeground"        : "#181e2b",
+            "list.deemphasizedForeground"           : "#ff0000",
+            "list.dropBackground"                   : "#ff0000",
+            "list.filterMatchBackground"            : "#ff0000",
+            "list.filterMatchBorder"                : "#ff0000",
+            "list.focusBackground"                  : "#ffcb4f",
+            "list.focusForeground"                  : "#181e2b",
+            "list.highlightForeground"              : "#ff0000",
+            "list.hoverBackground"                  : "#ffcb4f",
+            "list.hoverForeground"                  : "#181e2b",
+            "list.inactiveFocusBackground"          : "#ff0000",
+            "list.inactiveSelectionBackground"      : "#ffcb4f",
+            "list.inactiveSelectionForeground"      : "#181e2b",
+            "list.invalidItemForeground"            : "#ff0000",
+            "list.warningForeground"                : "#ff0000",
+            "list.errorForeground"                  : "#ff0000",
+
+            // Panel ------------------------------------------
+            // "panel.background"                   : "#ff0000",
+            // "panel.border"                       : "#ff0000",
+            // "panel.dropBackground"               : "#ff0000",
+            // "panelInput.border"                  : "#ff0000",
+            // "panelTitle.activeBorder"            : "#ff0000",
+            // "panelTitle.activeForeground"        : "#ff0000",
+            // "panelTitle.inactiveForeground"      : "#ff0000",
+
+            "scrollbar.shadow"                      : "#222835",
+            "scrollbarSlider.activeBackground"      : "#181e2b",
+            "scrollbarSlider.background"            : "#181e2b",
+            "scrollbarSlider.hoverBackground"       : "#ffcb4f",
+
+            // SideBar -----------------------------------------
+            "sideBar.background"                    : "#1e2431",
+            "sideBar.border"                        : "#181e2b",
+            "sideBar.foreground"                    : "#ffffff",
+            "sideBarSectionHeader.background"       : "#181e2b",
+            "sideBarSectionHeader.border"           : "#1e2431",
+            "sideBarSectionHeader.foreground"       : "#B0BEC5",
+            "sideBarTitle.foreground"               : "#ffffff",
+            "sideBar.dropBackground"                : "#ff0000",
+
+            // StatusBar ---------------------------------------
+            "statusBar.background"                  : "#181e2b",
+            "statusBar.border"                      : "#181e2b",
+            "statusBar.debuggingBackground"         : "#ff0000",
+            "statusBar.debuggingBorder"             : "#ff0000",
+            "statusBar.debuggingForeground"         : "#ff0000",
+            "statusBar.foreground"                  : "#B0BEC5",
+            "statusBar.noFolderBackground"          : "#ff0000",
+            "statusBar.noFolderBorder"              : "#ff0000",
+            "statusBar.noFolderForeground"          : "#ff0000",
+            "statusBarItem.activeBackground"        : "#181e2b",
+            "statusBarItem.hoverBackground"         : "#2f3646",
+            "statusBarItem.prominentBackground"     : "#ffcb4f",
+            "statusBarItem.prominentForeground"     : "#ffcb4f",
+            "statusBarItem.prominentHoverBackground": "#ffcb4f",
+            "statusBarItem.remoteBackground"        : "#ffcb4f",
+            "statusBarItem.remoteForeground"        : "#ffcb4f",
+
+            // Tab ------------------------------------------
+            "tab.activeBackground"                  : "#222835",
+            "tab.activeBorder"                      : "#222835",
+            "tab.activeBorderTop"                   : "#ffcb4f",
+            "tab.activeForeground"                  : "#B0BEC5",
+            "tab.activeModifiedBorder"              : "#ff0000",
+            "tab.border"                            : "#181e2b",
+            "tab.hoverBackground"                   : "#222835",
+            "tab.hoverBorder"                       : "#222835",
+            "tab.inactiveBackground"                : "#181e2b",
+            "tab.inactiveForeground"                : "#B0BEC5",
+            "tab.inactiveModifiedBorder"            : "#ff0000",
+            //"tab.unfocusedActiveBackground"         : "#ff0000",
+            "tab.unfocusedActiveBorder"             : "#ff0000",
+            "tab.unfocusedActiveBorderTop"          : "#ff0000",
+            "tab.unfocusedActiveForeground"         : "#ff0000",
+            "tab.unfocusedActiveModifiedBorder"     : "#ff0000",
+            "tab.unfocusedHoverBackground"          : "#ff0000",
+            "tab.unfocusedHoverBorder"              : "#ff0000",
+            "tab.unfocusedInactiveForeground"       : "#ff0000",
+            "tab.unfocusedInactiveModifiedBorder"   : "#ff0000",
+
+            // Terminal ----------------------------------------
+            "terminal.ansiBlack"                    : "#191e2a",
+            "terminal.ansiBlue"                     : "#6dcbfa",
+            "terminal.ansiBrightBlack"              : "#686868",
+            "terminal.ansiBrightBlue"               : "#73d0ff",
+            "terminal.ansiBrightCyan"               : "#95e6cb",
+            "terminal.ansiBrightGreen"              : "#bae67e",
+            "terminal.ansiBrightMagenta"            : "#d4bfff",
+            "terminal.ansiBrightRed"                : "#f28779",
+            "terminal.ansiBrightWhite"              : "#ffffff",
+            "terminal.ansiBrightYellow"             : "#ffd580",
+            "terminal.ansiCyan"                     : "#90e1c6",
+            "terminal.ansiGreen"                    : "#a6cc70",
+            "terminal.ansiMagenta"                  : "#cfbafa",
+            "terminal.ansiRed"                      : "#ed8274",
+            "terminal.ansiWhite"                    : "#c7c7c7",
+            "terminal.ansiYellow"                   : "#fad07b",
+            "terminal.background"                   : "#1e2431",
+            "terminal.foreground"                   : "#ffffff",
+            "terminalCursor.background"             : "#ff0000",
+            "terminalCursor.foreground"             : "#ffcb4f",
+
+            // Text
+            "textBlockQuote.border"                 : "#ff0000",
+            "textCodeBlock.background"              : "#ff0000",
+            "textLink.activeForeground"             : "#ff0000",
+            "textLink.foreground"                   : "#ffcb4f",
+            "textPreformat.foreground"              : "#ff0000",
+            "textSeparator.foreground"              : "#ff0000",
+
+            // TitleBar ----------------------------------------
+            "titleBar.activeBackground"             : "#181e2b",
+            "titleBar.activeForeground"             : "#ffcb4f",
+            "titleBar.border"                       : "#181e2b",
+            "titleBar.inactiveBackground"           : "#ff0000",
+            "titleBar.inactiveForeground"           : "#ff0000",
+
+            // Settings
+            "settings.checkboxBackground"           : "#181e2b",
+            "settings.checkboxBorder"               : "#181e2b",
+            "settings.checkboxForeground"           : "#ffcb4f",
+            "settings.dropdownBackground"           : "#181e2b",
+            "settings.dropdownBorder"               : "#181e2b",
+            "settings.dropdownForeground"           : "#ffcb4f",
+            "settings.dropdownListBorder"           : "#ffcb4f",
+            "settings.headerForeground"             : "#ffcb4f",
+            "settings.modifiedItemIndicator"        : "#ff0000",
+            "settings.numberInputBackground"        : "#181e2b",
+            "settings.numberInputBorder"            : "#181e2b",
+            "settings.numberInputForeground"        : "#ffcb4f",
+            "settings.textInputBackground"          : "#181e2b",
+            "settings.textInputForeground"          : "#ffcb4f"
+
+    },
+
+    // Plugins
+
+    //---------------------------------------
+    // Better Align - Plugin
+    // URL:
+    //---------------------------------------
     "alignment.operatorPadding" : "right",
     "alignment.indentBase"      : "dontchange",
     "alignment.surroundSpace"   : {
@@ -27,7 +441,10 @@
         "comment": 2
     },
 
-    // Auto-Align - Plugin ___________________________
+    //---------------------------------------
+    // Auto-Align - Plugin
+    // URL:
+    //---------------------------------------
     "autoalign.columnWidth"                       : 2,
     "autoalign.minSeparationLeft"                 : 3,
     "autoalign.separationRight"                   : 1,
@@ -102,119 +519,113 @@
     "autoalign.skipLinesEndingWithItemsAdditional": [
 
     ],
-    // Bracket Pair Colorizer 2 _______________________
-    "bracket-pair-colorizer-2.activeScopeCSS"     : [
-        "borderStyle : solid",
-        "borderWidth : 1px",
-        "borderColor : {color}",
-        "opacity: 0.5"
+
+    //---------------------------------------
+    // Bracket Pair Colorizer 2 - Plugin
+    // URL: https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
+    //---------------------------------------
+    "bracket-pair-colorizer-2.activeScopeCSS"           : [
+        "borderColor: #ff0000",
+        "borderStyle: solid",
+        "borderWidth: 2px",
+        "opacity    : 0.5",
     ],
-    "bracket-pair-colorizer-2.colorMode"          :"Consecutive",
-    // Breadcrumbs
-    "breadcrumbs.enabled"           : false,
-    // Editor
-         // Cursor
-    "editor.cursorBlinking"         : "smooth",
-    "editor.cursorStyle"            : "line",
-         // Font
-    "editor.fontFamily"             : "FiraCode-Retina",   // v3.1
-    "editor.fontLigatures"          : true,
-    "editor.fontSize"               : 13,
-    "editor.fontWeight"             : "300",               // 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
-    "editor.letterSpacing"          : 0,
-    "editor.lineHeight"             : 19,
-         // General
-    "editor.lineNumbers"            : "on",
-    "editor.minimap.enabled"        : true,
-    "editor.overviewRulerBorder"    : false,
-         // Render
-    "editor.renderControlCharacters": true,
-    "editor.renderLineHighlight"    : "all",
-    "editor.renderWhitespace"       : "selection",
-         // Scroll
-    "editor.scrollBeyondLastColumn" : 5,
-    "editor.scrollBeyondLastLine"   : true,
-    "editor.smoothScrolling"        : false,
-         // Snippets
-    "editor.snippetSuggestions"     : "top",
-        // Indentation
-    "editor.tabSize"                : 2,
-         // Word wrapping
-    "editor.wordWrap"               : "wordWrapColumn",
-    "editor.wordWrapColumn"         : 160,
-         // Tokens
-    "editor.tokenColorCustomizationsExperimental": {
-        // "class"  : "#ff0000",
-        // "comment": "#ff0000",
-        // "enum"   : "#ff0000",
-        // "keyword": "#ff0000",
-        // "string" : "#ff0000",
-        // "property": "#ff0000",
-        // "variable": "#ff0000"
-    },
-    "editor.tokenColorCustomizations"            : {
-        // "comments"            : "#636f82",
-        // "functions"           : "#00ff26",
-        // "keywords"            : "#ff00b7",
-        // "numbers"             : "#3700ff",
-        // "semanticHighlighting": true,
-        // "strings"             : "#ff8c00",
-        // "types"               : "#9d00ff",
-        // "variables"           : "#a6b738",
-    },
+    "bracket-pair-colorizer-2.colorMode"                :"Consecutive",
+    "bracket-pair-colorizer-2.colors"                   : [
+        "#03A9F4",
+        "#ffcb4f",
+        // "Gold",
+        // "Orchid",
+        // "LightSkyBlue",
+    ],
+    "bracket-pair-colorizer-2.excludedLanguages"        : [],
+    "bracket-pair-colorizer-2.forceIterationColorCycle" : false,
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor"  : false,
+    "bracket-pair-colorizer-2.highlightActiveScope"     : false,
+    "bracket-pair-colorizer-2.rulerPosition"            : "Full",
+    "bracket-pair-colorizer-2.scopeLineCSS"             : [
+        //"borderColor: #455A64",
+        //"borderStyle: dotted",
+        //"borderWidth: 1px",
+    ],
+    "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
+    "bracket-pair-colorizer-2.showBracketsInGutter"     : true,
+    "bracket-pair-colorizer-2.showBracketsInRuler"      : true,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine"  : true,
+    "bracket-pair-colorizer-2.showVerticalScopeLine"    : true,
+    "bracket-pair-colorizer-2.unmatchedScopeColor"      : "#ff0000",
 
-    // File associations
-    "files.associations"          : {},
-    "files.defaultLanguage"       : "plaintext",
-    "files.trimFinalNewlines"     : true,
-    "files.trimTrailingWhitespace": true,
+    //---------------------------------------
+    // Hihglighting RegExes - Plugin
+    // URL:
+    //---------------------------------------
+    // "highlight.regexes": {
+    //     "(// ?TODO:?)(.*)": [
+    //         {
+    //             "backgroundColor"   : "#ffcc00",
+    //             "color"             : "#1f1f1f",
+    //             "fontWeight"        : "bold",
+    //             "overviewRulerColor": "#ffcc00"
+    //         },
+    //         {
+    //             "backgroundColor"   : "#d9ad00",
+    //             "color"             : "#1f1f1f"
+    //         }
+    //     ],
+    //     "(// ?FIXME:?)(.*)": [
+    //         {
+    //             "backgroundColor"   : "#ff0000",
+    //             "color"             : "#1f1f1f",
+    //             "fontWeight"        : "bold",
+    //             "overviewRulerColor": "#ff0000",
+    //         },
+    //         {
+    //             "backgroundColor"   : "#d90000",
+    //             "color"             : "#1f1f1f",
+    //         }
+    //     ],
+    //     "(// )(@\\w+)": [
+    //         {},
+    //         {
+    //             "color": "#4de0ff",
+    //         }
+    //     ]
+    // },
+    // "highlight.regexFlags": "gi",
+    // "highlight.regexes": {
+    //     "(?<!\\w)(#[a-f0-9]{3,4}|#[a-f0-9]{6}|#[a-f0-9]{8}|rgba?\\s*\\([^)]*?\\)|hsla?\\s*\\([^)]*?\\)|aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyanaqua|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|green|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|tan|teal|thistle|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen)(?!\\w)":
+    //     [
+    //         {
+    //             "borderColor"   : "$1",
+    //             "borderRadius"  : "1px",
+    //             "borderStyle"   : "solid",
+    //             "borderWidth"   : "1px",
+    //             "color"         : "#F0F4C3",
+    //             "rangeBehavior" : 1,
+    //         }
+    //     ]
+    // },
 
-    // Git
-    "git.autofetch"               : true,
-    "git.enableSmartCommit"       : true,
-
-    // Hihglight regexes plugin
-    "highlight.regexes": {
-        "(// ?TODO:?)(.*)": [
-            {
-                "backgroundColor"   : "#ffcc00",
-                "color"             : "#1f1f1f",
-                "fontWeight"        : "bold",
-                "overviewRulerColor": "#ffcc00"
-            },
-            {
-                "backgroundColor": "#d9ad00",
-                "color"          : "#1f1f1f"
-            }
-        ],
-        "(// ?FIXME:?)(.*)": [
-            {
-                "backgroundColor"   : "#ff0000",
-                "color"             : "#1f1f1f",
-                "fontWeight"        : "bold",
-                "overviewRulerColor": "#ff0000",
-            },
-            {
-                "backgroundColor": "#d90000",
-                "color"          : "#1f1f1f",
-            }
-        ],
-        "(// )(@\\w+)": [
-            {},
-            {
-                "color": "#4de0ff",
-            }
-        ]
-    },
-
-    // Indent Rainbow
+    //---------------------------------------
+    // Indent Rainbow - Plugin
+    // URL:
+    //---------------------------------------
     "indentRainbow.colors"              : [
-        "rgba(255,255,64,0.07)",
-        "rgba(127,255,127,0.07)",
-        "rgba(255,127,255,0.07)",
-        "rgba(79,236,236,0.07)",
+        // TODO: Change colors and set alpha
+        "#26323850",
+        "#37474F32",
+        "#455A6429",
+        "#546E7A26",
+        "#607D8B23",
+        "#78909C20",
+        "#90A4AE17",
+
+        // "#ffff4212",
+        // "#80ff8012",
+        // "#ff80ff12",
+        // "#50eded12",
     ],
-    "indentRainbow.errorColor"          : "rgba(128,32,32,0.6)",
+    "indentRainbow.errorColor"          : "#7e202099",
     "indentRainbow.excludedLanguages"   : [
         "plaintext",
     ],
@@ -227,80 +638,161 @@
     ],
     "indentRainbow.includedLanguages"   : [],
     "indentRainbow.indentSetter"        : {},
-    "indentRainbow.tabmixColor"         : "rgba(128,32,96,0.6)",
+    "indentRainbow.tabmixColor"         : "#7e205f99",
     "indentRainbow.updateDelay"         : 100,
 
-    // Search
-    "search.exclude": {
-        "**/bower_components" : true,
-        "**/node_modules"     : true,
-        "*.min.js"            : true,
-        ".build/**"           : true,
-        "extensions/**/out/**": true,
-        "i18n/**"             : true,
-        "out*/**"             : true,
-    },
+    //---------------------------------------
+    // Raibow CSV - Plugin
+    // URL:
+    //---------------------------------------
+    "rainbow_csv.autodetect_separators": [
+        "\t",
+        ",",
+        ";",
+        "|"
+    ],
 
-    // Terminal
-    "terminal.external.osxExec"              : "Hyper.app",
-    "terminal.integrated.automationShell.osx": "/usr/local/bin/zsh",
-    "terminal.integrated.fontFamily"         : "FiraCode Nerd Font",
-    "terminal.integrated.fontSize"           : 12,
-    "terminal.integrated.lineHeight"         : 1,
-    "terminal.integrated.shell.osx"          : "/usr/local/bin/zsh",
+    //---------------------------------------
+    // TODO+ - Plugin
+    // URL:
+    //---------------------------------------
+    // "todo.archive.name"                      : "Archive",                                                   // Name of the special "Archive" section
+    // "todo.archive.project.enabled"           : true,                                                        // Enable the @project tag
+    // "todo.archive.project.separator"         : ".",                                                         // String used for joining multiple projects
+    // "todo.archive.remove.emptyLines"         : 1,                                                           // Remove extra empty lines, keeping no more than `emptyLinesThreshold` consecutive empty lines
+    // "todo.archive.remove.emptyProjects"      : true,                                                        // Remove projects without todos
+    // "todo.archive.sortByDate"                : false,                                                       // Sort lines by finished date
+    // "todo.colors.cancelled"                  : "#f92672",                                                   // Cancelled todo color
+    // "todo.colors.code"                       : "#fd971f",                                                   // Code color
+    // "todo.colors.comment"                    : "#75715e",                                                   // Comment color
+    // "todo.colors.dark"                       : { /* "done": "white", ... */ },                              // Colors for dark themes
+    // "todo.colors.done"                       : "#a6e22e",                                                   // Done todo color
+    // "todo.colors.light"                      : { /* "done": "black", ... */ },                              // Colors for light themes
+    // "todo.colors.project"                    : "#66d9ef",                                                   // Project color
+    // "todo.colors.projectStatistics"          : "#4694a3",                                                   // Project statistics color
+    // "todo.colors.tag"                        : "#e6db74",                                                   // Tag color
+    // "todo.colors.tags.background"            : ["#e54545", "#e59f45", "#e5d145", "#ae81ff"],                // Special tags' background colors
+    // "todo.colors.tags.foreground"            : ["#000000", "#000000", "#000000", "#000000"],                // Special tags' foreground colors
+    // "todo.colors.types"                      : { "TODO": "#ffcc00", "FIXME": "#cc0000", ... },              // Object mapping todo types to their color
+    // "todo.embedded.exclude"                  : ["**/.*", "**/.*/**", ...],                                  // Globs to use for excluding files
+    // "todo.embedded.file.groupByFile"         : true,                                                        // Group embedded todos by file
+    // "todo.embedded.file.groupByRoot"         : true,                                                        // Group embedded todos by workspace root
+    // "todo.embedded.file.groupByType"         : true,                                                        // Group embedded todos by type
+    // "todo.embedded.file.wholeLine"           : true,                                                        // Show the whole line
+    // "todo.embedded.include"                  : ["**/*"],                                                    // Globs to use for including files
+    // "todo.embedded.view.expanded"            : true,                                                        // Start the tree in an expanded state
+    // "todo.embedded.view.groupByFile"         : true,                                                        // Group embedded todos by file
+    // "todo.embedded.view.groupByRoot"         : true,                                                        // Group embedded todos by workspace root
+    // "todo.embedded.view.groupByType"         : true,                                                        // Group embedded todos by type
+    // "todo.embedded.view.icons"               : true,                                                        // Show icons next to todos and types"
+    // "todo.embedded.view.wholeLine"           : false,                                                       // Show the whole line
+    // "todo.embedded.provider"                 : "",                                                          // The provider to use when searching for embedded todos
+    // "todo.embedded.providers.ag.args"        : ["--ignore-case"],                                           // Extra arguments to pass to ag
+    // "todo.embedded.providers.rg.args"        : ["--ignore-case"],                                           // Extra arguments to pass to rg
+    // "todo.embedded.providers.ag.regex"       : "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)", // Regex used by ag, requires double escaping
+    // "todo.embedded.providers.rg.regex"       : "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)", // Regex used by rg, requires double escaping
+    // "todo.embedded.regex"                    : "(?:<!-- *)?(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))",   // Regex used for finding embedded todos, requires double escaping
+    // "todo.embedded.regexFlags"               : "gi",                                                        // Regex flags to use
+    // "todo.file.defaultContent"               : "\nTodo:\n  ☐ Item\n",                                       // New todo files default content
+    // "todo.file.exclude"                      : ["**/.!(todo|todos|task|tasks)/**", ...],                    // Globs to use for excluding files
+    // "todo.file.include"                      : ["**/TODO", ...],                                            // Globs to use for including files
+    // "todo.file.name"                         : "TODO",                                                      // Todo file name. Other supported names are: `*.todo`, `*.todos`, `*.task`, `*.tasks`, `*.taskpaper` and `todolist.txt`
+    // "todo.file.view.expanded"                : true,                                                        // Start the tree in an expanded state
+    // "todo.formatting.enabled"                : true,                                                        // Enable markdown-like formatting
+    // "todo.indentation"                       : "  ",                                                        // String used for indentation
+    // "todo.statistics.project.enabled"        : "global.projects < 100",                                     // Show statistics next to a project, boolean or JS expression
+    // "todo.statistics.project.text"           : "([pending]) [est]",                                         // Template used for rendering the text
+    // "todo.statistics.statusbar.alignment"    : "left",                                                      // Should the item be placed to the left or right?
+    // "todo.statistics.statusbar.color"        : "",                                                          // The foreground color for this item
+    // "todo.statistics.statusbar.command"      : "",                                                          // Command to execute on click
+    // "todo.statistics.statusbar.enabled"      : "global.projects < 100 && project.all > 0",                  // Show statistics in the statusbar, boolean or JS expression
+    // "todo.statistics.statusbar.ignoreArchive": true,                                                        // Ignore the archive when rendering statistics in the statusbar
+    // "todo.statistics.statusbar.priority"     : -1,                                                          // The priority of this item. Higher value means the item should be shown more to the left
+    // "todo.statistics.statusbar.text"         : "$(check) [finished]/[all] ([percentage]%)",                 // Template used for rendering the text
+    // "todo.statistics.statusbar.tooltip"      : "[pending] Pending - [done] Done - [cancelled] Cancelled",   // Template used for rendering the tooltip
+    // "todo.symbols.box"                       : "☐",                                                         // Box symbol
+    // "todo.symbols.cancelled"                 : "✘",                                                         // Cancelled symbol
+    // "todo.symbols.done"                      : "✔",                                                         // Done symbol
+    // "todo.tags.names"                        : ["critical", "high", "low", "today"],                        // Special tags' names
+    // "todo.tags.namesInference"               : true,                                                        // Infer commonly used tags' names
+    // "todo.timekeeping.created.enabled"       : false,                                                       // Enable the @created tag
+    // "todo.timekeeping.created.format"        : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @created
+    // "todo.timekeeping.created.time"          : true,                                                        // Insert the time inside the @created tag
+    // "todo.timekeeping.elapsed.enabled"       : true,                                                        // Enable the @lasted/wasted tag
+    // "todo.timekeeping.elapsed.format"        : "short-compact",                                             // Format used for displaying time diff inside @lasted/waster
+    // "todo.timekeeping.estimate.format"       : "short-compact",                                             // Format used for the `[est]` and `[est-total]` tokens
+    // "todo.timekeeping.finished.enabled"      : true,                                                        // Enable the @done/cancelled tag. It's always enabled if you explicitly start a todo or if you use only 1 symbol
+    // "todo.timekeeping.finished.format"       : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @done/cancelled
+    // "todo.timekeeping.finished.time"         : true,                                                        // Insert the time inside the @done/cancelled tag
+    // "todo.timekeeping.started.format"        : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @started
+    // "todo.timekeeping.started.time"          : true,                                                        // Insert the time inside the @started tag
+    // "todo.timer.statusbar.alignment"         : "left",                                                      // Should the item be placed to the left or right?
+    // "todo.timer.statusbar.color"             : "",                                                          // The foreground color for this item
+    // "todo.timer.statusbar.enabled"           : true,                                                        // Show a timer for started todos in the statusbar
+    // "todo.timer.statusbar.priority"          : -10,                                                         // The priority of this item. Higher value means the item should be shown more to the left
 
-    // Window
-    "window.newWindowDimensions": "default",
-    "window.title"              : ".${dirty} .${dirty} .${dirty} .${dirty} .${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} .${dirty} .${dirty} .${dirty} .${dirty} .${dirty}",
-    "window.titleBarStyle"      : "custom",
-    "window.zoomLevel"          : -1,
-
-    // Workbench ___________________________________________
-    "workbench.activityBar.visible": true,
-    "workbench.colorTheme"         : "Ayu Mirage",
-    "workbench.editor.tabSizing"   : "shrink",
-    "workbench.fontAliasing"       : "antialiased",
-    "workbench.iconTheme"          : "vscode-great-icons",
-    "workbench.sideBar.location"   : "left",
-    "workbench.statusBar.visible"  : true,
-    "workbench.colorCustomizations": {
-        // Colors _____________________
-        //
-        // #1e2431 - Tło
-        // #636f82 - Szare tło
-        // #ffcb4f - Żółte tło
-        // #181e2b - Ciemny granat tło
-        //
-        // Editor ------------------------------------------
-        "editor.background"                    : "#292d3e",    // Background Color Editor
-        //"editor.foreground"                    : "#ff0000",
-        "editor.hoverHighlightBackground"      : "#636f82",
-        //"editor.inactiveSelectionBackground"   : "#ff0000",
-        "editor.lineHighlightBackground"       : "#181e2b",
-        "editor.lineHighlightBorder"           : "#181e2b",
-        "editor.selectionBackground"           : "#636f82",
-        //"editor.selectionForeground"           : "#ff0000",
-        //"editor.selectionHighlightBackground"  : "#ff0000",
-        //"editor.selectionHighlightBorder"      : "#ff0000",
-        //"editor.stackFrameHighlightBackground" : "#ff0000",
-        //"editor.symbolHighlightBackground"     : "#ff0000",
-        //"editor.wordHighlightBackground"       : "#ff0000",
-        // SideBar -----------------------------------------
-        "sideBar.background"                   : "#1e2431",
-        "sideBar.border"                       : "#ffcb4f",
-        "sideBar.foreground"                   : "#636f82",
-        "sideBarSectionHeader.background"      : "#181e2b",
-        "sideBarSectionHeader.border"          : "#1e2431",
-        "sideBarSectionHeader.foreground"      : "#ffcb4f",
-        // StatusBar ---------------------------------------
-        "statusBar.background"                 : "#181e2b",
-        "statusBar.foreground"                 : "#ffcb4f",
-        // Terminal ----------------------------------------
-        "terminal.background"                  : "#1e2431",
-        "terminal.foreground"                  : "#ffffff",
-        "terminalCursor.background"            : "#ffcb4f",
-        "terminalCursor.foreground"            : "#ffcb4f",
-        // TitleBar ----------------------------------------
-        "titleBar.activeBackground"            : "#1e2431",
-    },
+    //---------------------------------------
+    // TODO Highlight - Plugin
+    // URL:
+    //---------------------------------------
+    // "todohighlight.isEnable": true,
+    // "todohighlight.isCaseSensitive": true,
+    // "todohighlight.keywords": [
+    //     "DEBUG:",
+    //     "REVIEW:",
+    //     {
+    //         "text": "NOTE:",
+    //         "color": "#ff0000",
+    //         "backgroundColor": "yellow",
+    //         "overviewRulerColor": "grey"
+    //     },
+    //     {
+    //         "text": "HACK:",
+    //         "color": "#000",
+    //         "isWholeLine": false,
+    //     },
+    //     {
+    //         "text": "TODO:",
+    //         "color": "red",
+    //         "border": "1px solid red",
+    //         "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+    //         "backgroundColor": "rgba(0,0,0,.2)",
+    //         //other styling properties goes here ...
+    //     }
+    // ],
+    // "todohighlight.keywordsPattern": "TODO:|FIXME:|\\(([^)]+)\\)", //highlight `TODO:`,`FIXME:` or content between parentheses
+    // "todohighlight.defaultStyle": {
+    //     "color": "red",
+    //     "backgroundColor": "#ffab00",
+    //     "overviewRulerColor": "#ffab00",
+    //     "cursor": "pointer",
+    //     "border": "1px solid #eee",
+    //     "borderRadius": "2px",
+    //     "isWholeLine": true,
+    //     //other styling properties goes here ...
+    // },
+    // "todohighlight.include": [
+    //     "**/*.js",
+    //     "**/*.jsx",
+    //     "**/*.ts",
+    //     "**/*.tsx",
+    //     "**/*.html",
+    //     "**/*.php",
+    //     "**/*.css",
+    //     "**/*.scss"
+    // ],
+    // "todohighlight.exclude": [
+    //     "**/node_modules/**",
+    //     "**/bower_components/**",
+    //     "**/dist/**",
+    //     "**/build/**",
+    //     "**/.vscode/**",
+    //     "**/.github/**",
+    //     "**/_output/**",
+    //     "**/*.min.*",
+    //     "**/*.map",
+    //     "**/.next/**"
+    // ],
+    // "todohighlight.maxFilesForSearch": 5120,
+    // "todohighlight.toggleURI": false,
 }
