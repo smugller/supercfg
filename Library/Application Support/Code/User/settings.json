@@ -165,7 +165,7 @@
     // Window
     //---------------------------------------
     "window.newWindowDimensions": "default",
-    "window.title"              : ".${dirty} .${dirty} .${dirty} .${dirty} .${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} .${dirty} .${dirty} .${dirty} .${dirty} .${dirty}",
+    "window.title"              : "${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} ${dirty}",
     "window.titleBarStyle"      : "custom",
     "window.zoomLevel"          : -1,
 
@@ -188,10 +188,12 @@
             //  #FFF176 - Yellow  Hover
             //          - Yellow  Active
             //          - Yellow  Inactive
+            //
             //  #181E2B - Dark    Background
             //          - Dark    Hover
             //          - Dark    Active
             //          - Dark    Inactive
+            //
             //  #222835 - Editor  Background
             //  #222835 - SideBar Background
             //
@@ -199,34 +201,33 @@
             //  #FF5252 - Error   Color
             //  #B2FF59 - Info    Color
             //  #FFFF00 - Warning Color
+            //  #00C853 - Success Color
             //
             //  Text:
             //  #CFD8DC - Text Foreground
             //
-            //
             // ----------------------------------------------------------------
 
-            // => Basic Colors -----
+            // => Basic Colors
             "descriptionForeground"                               : "#ff0000",
             "errorForeground"                                     : "#FF5252",
             "focusBorder"                                         : "#FDD835",
             "foreground"                                          : "#CFD8DC",
             "icon.foreground"                                     : "#FDD835",
-            "widget.shadow"                                       : "#FDD835",
-
-            // => Window -----
-            "window.activeBorder"                                 : "#ff0000",
-            "window.inactiveBorder"                               : "#ff0000",
 
             // ActivityBar
-            "activityBar.activeBackground"                        : "#181E2B",
-            "activityBar.activeBorder"                            : "#FDD835",
-            "activityBar.activeFocusBorder"                       : "#181E2B",
             "activityBar.background"                              : "#181E2B",
             "activityBar.border"                                  : "#181E2B",
             "activityBar.dropBackground"                          : "#ff0000",
             "activityBar.foreground"                              : "#FDD835",
             "activityBar.inactiveForeground"                      : "#CFD8DC",
+
+            // ActivityBaar Active
+            "activityBar.activeBackground"                        : "#181E2B",
+            "activityBar.activeBorder"                            : "#FDD835",
+            "activityBar.activeFocusBorder"                       : "#181E2B",
+
+            // ActivityBar Badge
             "activityBarBadge.background"                         : "#CFD8DC",
             "activityBarBadge.foreground"                         : "#181E2B",
 
@@ -234,11 +235,13 @@
             "badge.background"                                    : "#FDD835",
             "badge.foreground"                                    : "#181E2B",
 
-            // Breadcrumbs
+            // Breadcrumb
             "breadcrumb.activeSelectionForeground"                : "#FDD835",
             "breadcrumb.background"                               : "#181E2B",
             "breadcrumb.focusForeground"                          : "#FDD835",
             "breadcrumb.foreground"                               : "#CFD8DC",
+
+            // Breadcrumb Picker
             "breadcrumbPicker.background"                         : "#181E2B",
 
             // Button
@@ -253,21 +256,25 @@
 
             // Diff Editor
             "diffEditor.border"                                   : "#ff0000",
+
+            // Diff Editor Inserted
             "diffEditor.insertedTextBackground"                   : "#ff0000",
             "diffEditor.insertedTextBorder"                       : "#ff0000",
+
+            // Diff Editor Removed
             "diffEditor.removedTextBackground"                    : "#ff0000",
             "diffEditor.removedTextBorder"                        : "#ff0000",
 
             // Dropdown
-            "dropdown.background"                                 : "#ff0000",
-            "dropdown.border"                                     : "#CFD8DC",
-            "dropdown.foreground"                                 : "#ff0000",
+            "dropdown.background"                                 : "#181E2B",
+            "dropdown.border"                                     : "#181E2B",
+            "dropdown.foreground"                                 : "#FDD835",
             "dropdown.listBackground"                             : "#181E2B",
 
-            // ==> Editor.Def -----------------------------------------------------
+            // ==> Editor.Def --------------------------------------------------
 
             // => Main Colors
-            "editor.background"                                   : "#222835",  // Background Color Editor
+            "editor.background"                                   : "#222835",
             "editor.foreground"                                   : "#ffffff",
 
             // => Other Colors
@@ -276,13 +283,17 @@
             "editor.inactiveSelectionBackground"                  : "#708090",
             "editor.stackFrameHighlightBackground"                : "#ff0000",
 
-            // Find and Match
+            // Find Match
             "editor.findMatchBackground"                          : "#181E2B",
-            //"editor.findMatchBorder"                              : "#ff0000",  // TODO: zmienic background  dla wyszukiwanego słowa
+            "editor.findMatchBorder"                              : "#00C853",
+
+            // Find Match Highlight
             "editor.findMatchHighlightBackground"                 : "#181E2B",
-            //"editor.findMatchHighlightBorder"                     : "#ff0000",
+            "editor.findMatchHighlightBorder"                     : "#00C853",
+
+            // Find Range Highlight
             "editor.findRangeHighlightBackground"                 : "#181E2B",
-            //"editor.findRangeHighlightBorder"                     : "#ff0000",
+            "editor.findRangeHighlightBorder"                     : "#00C853",
 
             // Folded Line
             "editor.foldBackground"                               : "#181E2B",
@@ -292,8 +303,8 @@
             "editor.lineHighlightBorder"                          : "#181E2B",
 
             // Range
-            "editor.rangeHighlightBackground"                     : "#181E2B",  // TODO: Zmienic podsiwetlenie linii dla wyszukiwania
-            "editor.rangeHighlightBorder"                         : "#FDD835",
+            "editor.rangeHighlightBackground"                     : "#00C75340",
+            "editor.rangeHighlightBorder"                         : "#00C75340",
 
             // Selection
             "editor.selectionBackground"                          : "#708090",
@@ -316,12 +327,11 @@
             "editor.wordHighlightBorder"                          : "#ff0000",
             "editor.wordHighlightStrongBackground"                : "#ff0000",
             "editor.wordHighlightStrongBorder"                    : "#ff0000",
+
             // <== Editor.Def --------------------------------------------------
 
 
             // ==> EditorDef ---------------------------------------------------
-
-            // => Error, Info and Warning Colors
 
             // -> Error
             "editorError.border"                                  : "#222835",
@@ -334,29 +344,6 @@
             // -> Warning
             "editorWarning.border"                                : "#ff0000",
             "editorWarning.foreground"                            : "#ff0000",
-
-            // => Editor Widget Colors
-
-            // -> Widget
-            "editorWidget.background"                             : "#181E2B",
-            "editorWidget.border"                                 : "#ff0000",
-            "editorWidget.foreground"                             : "#ffffff",
-            "editorWidget.resizeBorder"                           : "#FDD835",
-
-            // -> Widget Hover
-            "editorHoverWidget.background"                        : "#181E2B",
-            "editorHoverWidget.border"                            : "#181E2B",
-            "editorHoverWidget.foreground"                        : "#FDD835",
-            "editorHoverWidget.statusBarBackground"               : "#ff0000",
-
-            // -> Widget Suggest
-            "editorSuggestWidget.background"                      : "#222835",
-            "editorSuggestWidget.border"                          : "#181E2B",
-            "editorSuggestWidget.foreground"                      : "#FDD835",
-            "editorSuggestWidget.highlightForeground"             : "#FDD835",
-            "editorSuggestWidget.selectedBackground"              : "#616161",
-
-            // ==> Other
 
             // Brackets
             "editorBracketMatch.background"                       : "#222835",
@@ -385,7 +372,7 @@
             "editorGutter.background"                             : "#181E2B",
             "editorGutter.commentRangeForeground"                 : "#ff0000",
             "editorGutter.deletedBackground"                      : "#ff0000",
-            "editorGutter.modifiedBackground"                     : "#ff0000",
+            "editorGutter.modifiedBackground"                     : "#64DD17",
 
             // Hint
             "editorHint.border"                                   : "#ff0000",
@@ -401,15 +388,21 @@
 
             // Line Number
             "editorLineNumber.activeForeground"                   : "#FDD835",
-            "editorLineNumber.foreground"                         : "#CFD8DC",
+            "editorLineNumber.foreground"                         : "#92a3ab",
 
             // Link
             "editorLink.activeForeground"                         : "#ff0000",
 
             // Marker Navigation
             "editorMarkerNavigation.background"                   : "#ff0000",
+
+            // Marker Navigation Error
             "editorMarkerNavigationError.background"              : "#FF5252",
+
+            // Marker Navigation Info
             "editorMarkerNavigationInfo.background"               : "#ff0000",
+
+            // Marker Navigation Warning
             "editorMarkerNavigationWarning.background"            : "#ff0000",
 
             // Overwiew Ruler
@@ -427,9 +420,13 @@
             "editorOverviewRuler.wordHighlightForeground"         : "#ff0000",
             "editorOverviewRuler.wordHighlightStrongForeground"   : "#ff0000",
 
-            // Overwiew Ruler - Errors, Info and Warnings
+            // Overwiew Ruler Error
             "editorOverviewRuler.errorForeground"                 : "#FF5252",
+
+            // Overwiew Ruler Info
             "editorOverviewRuler.infoForeground"                  : "#ff0000",
+
+            // Overwiew Ruler Warning
             "editorOverviewRuler.warningForeground"               : "#ff0000",
 
             // Pane
@@ -441,6 +438,25 @@
             // Unnecessary Code
             "editorUnnecessaryCode.border"                        : "#ff0000",
             "editorUnnecessaryCode.opacity"                       : "#ff0000",
+
+            // Widget
+            "editorWidget.background"                             : "#181E2B",
+            "editorWidget.border"                                 : "#ff0000",
+            "editorWidget.foreground"                             : "#ffffff",
+            "editorWidget.resizeBorder"                           : "#FDD835",
+
+            // Widget Hover
+            "editorHoverWidget.background"                        : "#181E2B",
+            "editorHoverWidget.border"                            : "#181E2B",
+            "editorHoverWidget.foreground"                        : "#FDD835",
+            "editorHoverWidget.statusBarBackground"               : "#ff0000",
+
+            // Widget Suggest
+            "editorSuggestWidget.background"                      : "#222835",
+            "editorSuggestWidget.border"                          : "#181E2B",
+            "editorSuggestWidget.foreground"                      : "#FDD835",
+            "editorSuggestWidget.highlightForeground"             : "#FDD835",
+            "editorSuggestWidget.selectedBackground"              : "#616161",
 
             // Whitespace
             "editorWhitespace.foreground"                         : "#181E2B",
@@ -483,7 +499,7 @@
 
             // List
             "list.deemphasizedForeground"                         : "#ff0000",
-            "list.dropBackground"                                 : "#ff0000",
+            "list.dropBackground"                                 : "#181E2B",
             "list.invalidItemForeground"                          : "#ff0000",
 
             // List Active
@@ -511,7 +527,7 @@
             "list.inactiveSelectionForeground"                    : "#181E2B",
 
             // List Warning
-            "list.warningForeground"                              : "#ff0000",
+            "list.warningForeground"                              : "#FFFF00",
 
             // List Error
             "list.errorForeground"                                : "#FF5252",
@@ -525,9 +541,13 @@
             "menu.background"                                     : "#ff0000",
             "menu.border"                                         : "#ff0000",
             "menu.foreground"                                     : "#ff0000",
+
+            // Menu Selection
             "menu.selectionBackground"                            : "#ff0000",
             "menu.selectionBorder"                                : "#ff0000",
             "menu.selectionForeground"                            : "#ff0000",
+
+            // Menu Separator
             "menu.separatorBackground"                            : "#ff0000",
 
             // MenuBar
@@ -557,41 +577,57 @@
             "minimapSlider.hoverBackground"                       : "#b0bec44f",
 
             // Panel
-            "panel.background"                                    : "#ff0000",
-            "panel.border"                                        : "#ff0000",
+            "panel.background"                                    : "#222835",
+            "panel.border"                                        : "#181E2B",
             "panel.dropBackground"                                : "#ff0000",
-            "panelInput.border"                                   : "#ff0000",
-            "panelTitle.activeBorder"                             : "#ff0000",
-            "panelTitle.activeForeground"                         : "#ff0000",
-            "panelTitle.inactiveForeground"                       : "#ff0000",
 
-            // Peek View
+            // Panel Input
+            "panelInput.border"                                   : "#ff0000",
+
+            // Panel Title Active
+            "panelTitle.activeBorder"                             : "#FDD835",
+            "panelTitle.activeForeground"                         : "#CFD8DC",
+
+            // Panel Title Inactive
+            "panelTitle.inactiveForeground"                       : "#CFD8DC",
+
+            // PeekView
             "peekView.border"                                     : "#ff0000",
+
+            // PeekView Editor
             "peekViewEditor.background"                           : "#ff0000",
             "peekViewEditor.matchHighlightBackground"             : "#ff0000",
             "peekViewEditor.matchHighlightBorder"                 : "#ff0000",
+
+            // PeekView Editor Gutter
             "peekViewEditorGutter.background"                     : "#ff0000",
+
+            // PeekView Result
             "peekViewResult.background"                           : "#ff0000",
             "peekViewResult.fileForeground"                       : "#ff0000",
             "peekViewResult.lineForeground"                       : "#ff0000",
             "peekViewResult.matchHighlightBackground"             : "#ff0000",
             "peekViewResult.selectionBackground"                  : "#ff0000",
             "peekViewResult.selectionForeground"                  : "#ff0000",
+
+            // PeekView Title
             "peekViewTitle.background"                            : "#ff0000",
             "peekViewTitleDescription.foreground"                 : "#ff0000",
             "peekViewTitleLabel.foreground"                       : "#ff0000",
 
-            // Picker
-            "pickerGroup.border"                                  : "#ff0000",
-            "pickerGroup.foreground"                              : "#ff0000",
+            // Picker ( Colors when click CMD + Shift + P)
+            "pickerGroup.border"                                  : "#FDD835",
+            "pickerGroup.foreground"                              : "#181E2B",
 
             // ProgressBar
             "progressBar.background"                              : "#ff0000",
 
             // ScrollBar
             "scrollbar.shadow"                                    : "#222835",
+
+            // ScrollBar Slider
             "scrollbarSlider.activeBackground"                    : "#FDD835",
-            "scrollbarSlider.background"                          : "#CFD8DC",
+            "scrollbarSlider.background"                          : "#CFD8DC", // TODO: change this color to yellow?
             "scrollbarSlider.hoverBackground"                     : "#181E2B",
 
             // Search
@@ -606,15 +642,25 @@
             "settings.checkboxBackground"                         : "#181E2B",
             "settings.checkboxBorder"                             : "#181E2B",
             "settings.checkboxForeground"                         : "#FDD835",
+
+            // Settings Dropdown
             "settings.dropdownBackground"                         : "#181E2B",
             "settings.dropdownBorder"                             : "#181E2B",
             "settings.dropdownForeground"                         : "#FDD835",
             "settings.dropdownListBorder"                         : "#FDD835",
+
+            // Settings Header
             "settings.headerForeground"                           : "#FDD835",
+
+            // Settings Indicator
             "settings.modifiedItemIndicator"                      : "#FDD835",
+
+            // Settings Number
             "settings.numberInputBackground"                      : "#181E2B",
             "settings.numberInputBorder"                          : "#181E2B",
             "settings.numberInputForeground"                      : "#FDD835",
+
+            // Settings Text
             "settings.textInputBackground"                        : "#181E2B",
             "settings.textInputBorder"                            : "#181E2B",
             "settings.textInputForeground"                        : "#FDD835",
@@ -622,54 +668,80 @@
             // SideBar
             "sideBar.background"                                  : "#222835",
             "sideBar.border"                                      : "#181E2B",
-            "sideBar.foreground"                                  : "#ffffff",
+            "sideBar.foreground"                                  : "#CFD8DC",
+            "sideBar.dropBackground"                              : "#ff0000",
+
+            // SideBar Header
             "sideBarSectionHeader.background"                     : "#181E2B",
             "sideBarSectionHeader.border"                         : "#222835",
-            "sideBarSectionHeader.foreground"                     : "#CFD8DC",
-            "sideBarTitle.foreground"                             : "#ffffff",
-            "sideBar.dropBackground"                              : "#ff0000",
+            "sideBarSectionHeader.foreground"                     : "#FDD835",
+
+            // SideBar Title
+            "sideBarTitle.foreground"                             : "#CFD8DC",
 
             // StatusBar
             "statusBar.background"                                : "#181E2B",
             "statusBar.border"                                    : "#181E2B",
+            "statusBar.foreground"                                : "#CFD8DC",
+
+            // StatusBar Debugging
             "statusBar.debuggingBackground"                       : "#ff0000",
             "statusBar.debuggingBorder"                           : "#ff0000",
             "statusBar.debuggingForeground"                       : "#ff0000",
-            "statusBar.foreground"                                : "#CFD8DC",
+
+            // StatusBar No Folder
             "statusBar.noFolderBackground"                        : "#ff0000",
             "statusBar.noFolderBorder"                            : "#ff0000",
             "statusBar.noFolderForeground"                        : "#ff0000",
+
+            // StatusBar Item
             "statusBarItem.activeBackground"                      : "#181E2B",
             "statusBarItem.hoverBackground"                       : "#2f3646",
+
+            // StatusBar Item Prominent
             "statusBarItem.prominentBackground"                   : "#FDD835",
             "statusBarItem.prominentForeground"                   : "#FDD835",
             "statusBarItem.prominentHoverBackground"              : "#FDD835",
+
+            // StatusBar Item Remote
             "statusBarItem.remoteBackground"                      : "#FDD835",
             "statusBarItem.remoteForeground"                      : "#FDD835",
 
-            // Tab
+            // Tab Active
             "tab.activeBackground"                                : "#222835",
             "tab.activeBorder"                                    : "#222835",
             "tab.activeBorderTop"                                 : "#FDD835",
             "tab.activeForeground"                                : "#CFD8DC",
             "tab.activeModifiedBorder"                            : "#ff0000",
+
+            // Tab Border
             "tab.border"                                          : "#181E2B",
+
+            // Tab Hover
             "tab.hoverBackground"                                 : "#222835",
             "tab.hoverBorder"                                     : "#222835",
+
+            // Tab Inactive
             "tab.inactiveBackground"                              : "#181E2B",
             "tab.inactiveForeground"                              : "#CFD8DC",
             "tab.inactiveModifiedBorder"                          : "#ff0000",
+
+            // Tab Unfocused Active
             "tab.unfocusedActiveBackground"                       : "#222835",
             "tab.unfocusedActiveBorder"                           : "#222835",
             "tab.unfocusedActiveBorderTop"                        : "#CFD8DC",
             "tab.unfocusedActiveForeground"                       : "#CFD8DC",
             "tab.unfocusedActiveModifiedBorder"                   : "#ff0000",
+
+            // Tab Unfocused Hover
             "tab.unfocusedHoverBackground"                        : "#181E2B",
             "tab.unfocusedHoverBorder"                            : "#ff0000",
+
+            // Tab Unfocused Inactive
             "tab.unfocusedInactiveForeground"                     : "#CFD8DC",
             "tab.unfocusedInactiveModifiedBorder"                 : "#ff0000",
 
-            // Terminal
+            // Terminal ANSI
             "terminal.ansiBlack"                                  : "#191e2a",
             "terminal.ansiBlue"                                   : "#6dcbfa",
             "terminal.ansiBrightBlack"                            : "#686868",
@@ -686,31 +758,54 @@
             "terminal.ansiRed"                                    : "#ed8274",
             "terminal.ansiWhite"                                  : "#c7c7c7",
             "terminal.ansiYellow"                                 : "#fad07b",
+
+            // Terminal
             "terminal.background"                                 : "#222835",
-            "terminal.border"                                     : "#ff0000",
+            "terminal.border"                                     : "#181E2B",
             "terminal.foreground"                                 : "#ffffff",
-            "terminal.selectionBackground"                        : "#ff0000",
+            "terminal.selectionBackground"                        : "#708090",
+
+            // Terminal Cursor
             "terminalCursor.background"                           : "#ff0000",
             "terminalCursor.foreground"                           : "#FDD835",
 
-            // Text
+            // Text Quote
             "textBlockQuote.border"                               : "#FDD835",
             "textBlockQuote.background"                           : "#181E2B",
+
+            // Text Code
             "textCodeBlock.background"                            : "#ff0000",
+
+            // Text Link
             "textLink.activeForeground"                           : "#CFD8DC",
             "textLink.foreground"                                 : "#FDD835",
+
+            // Text Preformat
             "textPreformat.foreground"                            : "#FDD835",
+
+            // Text Separator
             "textSeparator.foreground"                            : "#ff0000",
 
             // TitleBar
+            "titleBar.border"                                     : "#181E2B",
+
+            // TitleBar Active
             "titleBar.activeBackground"                           : "#181E2B",
             "titleBar.activeForeground"                           : "#CFD8DC",
-            "titleBar.border"                                     : "#181E2B",
+
+            // TitleBaar Inactive
             "titleBar.inactiveBackground"                         : "#181E2B",
             "titleBar.inactiveForeground"                         : "#FDD835",
 
             // Tree
             "tree.indentGuidesStroke": "#ff0000",
+
+            // Widget
+            "widget.shadow"                                       : "#FDD835",
+
+            // Window
+            "window.activeBorder"                                 : "#ff0000",
+            "window.inactiveBorder"                               : "#ff0000",
     },
 
     // Plugins ------------------------------------------------------------------------------------------------------------------------------------------------
