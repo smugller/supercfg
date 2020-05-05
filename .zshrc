@@ -183,9 +183,9 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
-        echo; zplug install
+      echo; zplug install
     else
-        echo
+      echo
     fi
 fi
 
