@@ -183,6 +183,7 @@ module.exports = {
   plugins: [
     //"hyper-clean",
     //"hyper-blink",
+    //"nord-hyper", // Nord Theme
     "hyper-alt-click",
     "hyper-always-on-top",
     "hyper-dark-scrollbar",
@@ -190,7 +191,7 @@ module.exports = {
     "hyper-font-ligatures",
     "hyper-highlight-active-pane",
     "hyper-search",
-    "hyper-snazzy",
+    "hyper-snazzy", // Snazzy Theme
     "hyper-tabs-enhanced",
     "hyperborder",
     "hyperline",
