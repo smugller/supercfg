@@ -1,10 +1,15 @@
-# Screenshot
+# Screenshots
 
-Hyper:
-![Hyper](https://i.imgur.com/rckZ94l.png)
+## Hyper
+![Hyper](https://i.imgur.com/cN69fpl.png)
 
-Alacritty:
-![Alacritty](https://i.imgur.com/gSCd7NL.png)
+## Alacritty
+![Alacritty](https://i.imgur.com/P6m7EzO.png)
+
+## VSCode
+**Note**: This is my custom Visual Studio Theme that I'm working on.
+
+![Visual Studio Code](https://i.imgur.com/OUsExPd.png)
 
 # Contact
 
