@@ -1,0 +1,38 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//   Author: Smugller
+//     Date: 01.05.2020
+//   GitHub: https://github.com/smugller
+//  Contact: ?
+//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[
+    // Toggle Word Wrap
+    {
+
+      "key": "alt+z",
+      "command": "-editor.action.toggleWordWrap"
+    },
+    // Turn On / Off TM Scopes
+    {
+
+      "key": "cmd+alt+shift+i",
+      "command": "editor.action.inspectTMScopes"
+    },
+    // Paste and Indent
+    {
+      "key": "cmd+v",
+      "command": "pasteAndIndent.action",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "cmd+v",
+      "command": "editor.action.clipboardPasteAction",
+      "when": "!editorTextFocus"
+    },
+    {
+      "key": "cmd+shift+v",
+      "command": "editor.action.clipboardPasteAction",
+      "when": "editorTextFocus && !editorReadonly"
+  }
+]

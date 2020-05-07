@@ -91,34 +91,108 @@
     // Tokens Customization
     "editor.tokenColorCustomizations"            : {
         "semanticHighlighting": true,
-        // "comments"            : "#ffffff",
-        // "functions"           : "#ffffff",
-        // "keywords"            : "#ffffff",
-        // "numbers"             : "#ffffff",
-        // "strings"             : "#ffffff",
-        // "types"               : "#ffffff",
-        // "variables"           : "#ffffff",
+        // "comments"            : "#5C6773",
+        // "functions"           : "#ff0000",
+        // "keywords"            : "#ff0000",
+        // "numbers"             : "#ff0000",
+        // "strings"             : "#FFF176",
+        // "types"               : "#ff0000",
+        // "variables"           : "#ff0000",
 
         // Text Mate Rules
         "textMateRules": [
+            // Property name ("files.something")
             {
-                "name": "Description",
-                "scope": "support.type.property-name",
-                "settings": {
+                "scope":
+                [
+                    "support.type.property-name",
+                    "entity.name.tag",
+                ],
+                "settings":
+                {
                     "foreground": "#BDBDBD",
-                }
+                },
             },
+            // Constants (true, false etc.)
             {
-                "name": "Something",
-                "scope": [
+                "scope":
+                [
                     "constant.numeric",
                     "constant.language",
                 ],
-                "settings": {
-                    "foreground": "#BAE67E",
-                    //"fontStyle": "bold"
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                    "fontStyle" : "bold",
                 }
-            }
+            },
+            // Comment
+            {
+                "scope":
+                [
+                    "comment",
+                    "punctuation.definition.comment",
+                ],
+                "settings":
+                {
+                    "foreground": "#5d6874bd",
+                }
+            },
+            // String
+            {
+                "scope":
+                [
+                    "string",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                }
+            },
+            // Keyword
+            {
+                "scope":
+                [
+                    "keyword"
+                ],
+                "settings":
+                {
+                    "foreground": "#FFE0B2"
+                }
+            },
+            // Function (printf, source, alias etc.)
+            {
+                "scope":
+                [
+                    "support.function"
+                ],
+                "settings":
+                {
+                    "foreground": "#FF9E80"
+                }
+            },
+            // Support Class
+            {
+                "scope":
+                [
+                    "support.class"
+                ],
+                "settings":
+                {
+                    "foreground": "#ffffff"
+                }
+            },
+            // Blank
+            {
+                "scope":
+                [
+
+                ],
+                "settings":
+                {
+
+                }
+            },
         ]
     },
 
@@ -207,7 +281,6 @@
             //  #CFD8DC - Text Foreground
             //
             // ----------------------------------------------------------------
-
             // ActivityBar
             "activityBar.background"                              : "#181E2B",
             "activityBar.border"                                  : "#181E2B",
@@ -458,9 +531,9 @@
             "editorHoverWidget.statusBarBackground"               : "#616161",
 
             // Widget Suggest
-            "editorSuggestWidget.background"                      : "#181E2B", // TODO: snippets
+            "editorSuggestWidget.background"                      : "#181E2B",
             "editorSuggestWidget.border"                          : "#181E2B",
-            "editorSuggestWidget.foreground"                      : "#FDD835",
+            "editorSuggestWidget.foreground"                      : "#FFF176",
             "editorSuggestWidget.highlightForeground"             : "#FDD835",
             "editorSuggestWidget.selectedBackground"              : "#616161",
 
@@ -688,9 +761,9 @@
             "scrollbar.shadow"                                    : "#222835",
 
             // ScrollBar Slider
-            "scrollbarSlider.activeBackground"                    : "#FDD835",
-            "scrollbarSlider.background"                          : "#CFD8DC", // TODO: change this color to yellow?
-            "scrollbarSlider.hoverBackground"                     : "#181E2B",
+            "scrollbarSlider.activeBackground"                    : "#FFF176",
+            "scrollbarSlider.background"                          : "#FFF176",
+            "scrollbarSlider.hoverBackground"                     : "#FFF176",
 
             // Search
             "searchEditor.findMatchBackground"                    : "#ff0000",
@@ -736,7 +809,7 @@
             // SideBar Header
             "sideBarSectionHeader.background"                     : "#181E2B",
             "sideBarSectionHeader.border"                         : "#222835",
-            "sideBarSectionHeader.foreground"                     : "#FDD835",
+            "sideBarSectionHeader.foreground"                     : "#FDD835", // TODO: Zmienic foreground na lekko jasniejsze
 
             // SideBar Title
             "sideBarTitle.foreground"                             : "#CFD8DC",
@@ -895,7 +968,7 @@
             "titleBar.inactiveForeground"                         : "#FDD835",
 
             // Tree
-            "tree.indentGuidesStroke"                             : "#ff0000",
+            "tree.indentGuidesStroke"                             : "#FFF176",
 
             // Welcome Page
             "welcomePage.background"                              : "#222835",
@@ -1027,9 +1100,9 @@
         "[]",
         "{}",
         [
-            "#FFFF00",
-            "#FF9100",
             "#B2FF59",
+            "#FF5252",
+            "#2196F3",
             //"#ff0000",
             //"#ff0000",
         ],

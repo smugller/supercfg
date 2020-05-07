@@ -9,9 +9,9 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
+export   LANG="en_US.UTF-8"
 
-export PATH=$HOME/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:$PATH
+export  PATH=$HOME/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:$PATH
 export SHELL=/usr/local/bin/zsh
 
 # Path to your oh-my-zsh installation.
@@ -35,6 +35,8 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
+# START Experimental --------------------
+
 # #libressl
 # export PATH="/usr/local/opt/libressl/bin:$PATH"
 
@@ -52,6 +54,8 @@ eval "$(phpenv init -)"
 
 # symlink openssl
 # ln -s /usr/local/opt/openssl@1.1/include/openssl /usr/local/include
+
+# END Experimental --------------------
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -170,11 +174,11 @@ fi
 source ~/.zplug/init.zsh
 
 # Make sure to use double quotes to prevent shell expansion
-zplug "romkatv/powerlevel10k", as:theme, use:powerlevel10k.zsh-theme, depth:1
+zplug "romkatv/powerlevel10k",                  as:theme, use:powerlevel10k.zsh-theme, depth:1
 zplug "chrissicool/zsh-256color"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-syntax-highlighting",      defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # Add a bunch more of your favorite packages!
@@ -193,17 +197,15 @@ zplug load
 
 # Aliases
 
+# The next gen ls command - https://github.com/Peltoche/lsd
+alias   l="lsd -1 --group-dirs first"
+alias  ll="lsd -a --group-dirs first"
+alias lll="lsd -la --group-dirs first"
+alias  lt="lsd --tree"
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
-# The next gen ls command - https://github.com/Peltoche/lsd
-alias ls="lsd"
-
-alias l="ls -1"
-alias la="ls -a"
-alias lla="ls -la"
-alias lt="ls --tree"
 
 # Functions
 
