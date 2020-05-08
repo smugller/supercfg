@@ -55,7 +55,7 @@
     "editor.tabSize"                : 2,
 
     // Word wrapping
-    "editor.wordWrap"               : "wordWrapColumn",
+    "editor.wordWrap"               : "off",
     "editor.wordWrapColumn"         : 160,
 
     // Brackets
@@ -63,7 +63,7 @@
     "editor.autoClosingBrackets"    : "always",
 
     // Tokens Experimental
-    "editor.tokenColorCustomizationsExperimental": {
+    "editor.semanticTokenColorCustomizations": {
         // "class"         : "#ff0000",
         // "comment"       : "#ff0000",
         // "enum"          : "#ff0000",
@@ -90,7 +90,7 @@
 
     // Tokens Customization
     "editor.tokenColorCustomizations"            : {
-        "semanticHighlighting": true,
+        // "semanticHighlighting": true, // Not allowed anymore
         // "comments"            : "#5C6773",
         // "functions"           : "#ff0000",
         // "keywords"            : "#ff0000",
@@ -388,6 +388,8 @@
             // Selection
             "editor.selectionBackground"                          : "#708090",
             "editor.selectionForeground"                          : "#ff0000",
+
+            // Selection Highlight
             "editor.selectionHighlightBackground"                 : "#708090",
             "editor.selectionHighlightBorder"                     : "#708090",
 
@@ -560,6 +562,15 @@
             // Foreground
             "foreground"                                          : "#CFD8DC",
 
+            // Git colors on lists
+            "gitDecoration.addedResourceForeground"               : "#D500F9",
+            "gitDecoration.conflictingResourceForeground"         : "#FF5252",
+            "gitDecoration.deletedResourceForeground"             : "#D500F9",
+            "gitDecoration.ignoredResourceForeground"             : "#D500F9",
+            "gitDecoration.modifiedResourceForeground"            : "#00C853",
+            "gitDecoration.submoduleResourceForeground"           : "#D500F9",
+            "gitDecoration.untrackedResourceForeground"           : "#D500F9",
+
             // Icon
             "icon.foreground"                                     : "#FDD835",
 
@@ -612,8 +623,8 @@
             "list.highlightForeground"                            : "#ff0000",
 
             // List Hover
-            "list.hoverBackground"                                : "#181E2B",
-            "list.hoverForeground"                                : "#CFD8DC",
+            "list.hoverBackground"                                : "#FDD835", //181E2B
+            "list.hoverForeground"                                : "#181E2B", //CFD8DC
 
             // List Inactive
             "list.inactiveFocusBackground"                        : "#181E2B",

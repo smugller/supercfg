@@ -160,7 +160,14 @@ plugins=(
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Custom settings
+# Custom settings ==========================================
+
+# Hyper Terminal
+
+# Delete % sign from Hyper Terminal - (This is workaround, in next versions should be fixed)
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
 
 # zplug
 
