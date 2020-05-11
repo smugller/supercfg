@@ -226,7 +226,7 @@ function cheat-sheet() {
   curl "https://cht.sh/$1"
 }
 
-# list all npm global packages
+# List all npm global packages
 function npm-global-variables() {
   npm list -g --depth 0
 }
@@ -236,8 +236,39 @@ function system-info() {
   glances
 }
 
-# Other useful aliases
+# Docker devilbox commands
 
+function d-start() {
+  cd $HOME/scripts/devilbox/
+  docker-compose up -d httpd php mysql memcd
+  echo "Docker images started... OK"
+  cd $HOME
+}
+
+function d-stop() {
+  cd $HOME/scripts/devilbox/
+  docker-compose stop
+  docker-compose rm -f
+  echo "Docker images stopped and removed... OK"
+  cd $HOME
+}
+
+function d-gotodev() {
+  cd $HOME/scripts/devilbox/data/www/presta/htdocs/themes/royal-theme/_dev
+}
+
+function d-update-dependencies() {
+  gotodev
+  npx npm-check-updates -u
+}
+
+# Check my external IP
+function my-ext-ip()
+{
+  curl -s https://api.ipify.org && echo
+}
+
+# testcolors
 alias testcolors1="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
 alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
 
