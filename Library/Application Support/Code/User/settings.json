@@ -1018,7 +1018,8 @@
                     "keyword.other.unit.rem.css",
                     "keyword.other.unit.s.css",
                     "keyword.other.unit.vw.css",
-                    "support.constant.mathematical-symbols.scss"
+                    "support.constant.mathematical-symbols.scss",
+                    "meta.property-value.scss"
                 ],
                 "settings":
                 {
@@ -1032,7 +1033,8 @@
                 [
                     "support.constant.property-value.css",
                     "support.constant.vendored.property-value.css",
-                    "meta.definition.variable.scss"
+                    "meta.definition.variable.scss",
+                    "support.constant.font-name.css"
                 ],
                 "settings":
                 {
@@ -1143,7 +1145,9 @@
                 // Colors like hex etc.
                 "scope":
                 [
-                    "constant.other.color.rgb-value.hex.css"
+                    "constant.other.color.rgb-value.hex.css",
+                    "support.constant.color.w3c-standard-color-name.css",
+                    "support.constant.color.w3c-extended-color-name.css"
                 ],
                 "settings":
                 {
@@ -1243,6 +1247,19 @@
                     "fontStyle": ""
                 }
             },
+            {
+                // Character Escape
+                "scope":
+                [
+                    "constant.character.escape.json"
+                ],
+                "settings":
+                {
+                    "foreground": "#E57373",
+                    "fontStyle": ""
+                }
+            },
+
             //========================================================================================
             // SHELL
             //========================================================================================
@@ -1436,7 +1453,7 @@
     // Workbench
     //---------------------------------------
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme"         : "Ayu Mirage Bordered",
+    "workbench.colorTheme"         : "GitHub Dark",
     "workbench.editor.tabSizing"   : "shrink",
     "workbench.fontAliasing"       : "antialiased",
     "workbench.iconTheme"          : "vscode-great-icons",
@@ -1564,6 +1581,7 @@
 
             // Diff Editor
             "diffEditor.border"                                   : "#ff0000",
+            "diffEditor.diagonalFill"                             : "#ff0000",
 
             // Diff Editor Inserted
             "diffEditor.insertedTextBackground"                   : "#ff0000",
@@ -1675,7 +1693,7 @@
             "editorGroup.focusedEmptyBorder"                      : "#FDD835",
 
             // Group Header
-            "editorGroupHeader.border"                            : "#ff0000",
+            "editorGroupHeader.border"                            : "#222835",
             "editorGroupHeader.noTabsBackground"                  : "#181E2B",
             "editorGroupHeader.tabsBackground"                    : "#181E2B",
             "editorGroupHeader.tabsBorder"                        : "#222835",
@@ -1924,6 +1942,11 @@
             "minimapSlider.background"                            : "#b0bec44f",
             "minimapSlider.hoverBackground"                       : "#b0bec44f",
 
+            // Notebook
+            "notebook.cellToolbarSeperator"                       : "#ff0000",
+            "notebook.focusedCellIndicator"                       : "#ff0000",
+            "notebook.outputContainerBackgroundColor"             : "#ff0000",
+
             // Notification Center
             "notificationCenter.border"                           : "#181E2B",
             "notificationCenterHeader.background"                 : "#FDD835",
@@ -1991,6 +2014,11 @@
             // Picker ( Colors when click CMD + Shift + P)
             "pickerGroup.border"                                  : "#FDD835",
             "pickerGroup.foreground"                              : "#181E2B",
+
+            // Problems
+            "problemsErrorIcon.foreground"                        : "#ff0000",
+            "problemsInfoIcon.foreground"                         : "#ff0000",
+            "problemsWarningIcon.foreground"                      : "#ff0000",
 
             // ProgressBar
             "progressBar.background"                              : "#ff0000",
@@ -2152,10 +2180,10 @@
             // Tab Unfocused Hover
             "tab.unfocusedHoverBackground"                        : "#181E2B",
             "tab.unfocusedHoverBorder"                            : "#ff0000",
-            "tab.unfocusedHoverForeground"                        : "#ff0000",
+            "tab.unfocusedHoverForeground"                        : "#FDD835",
 
             // Tab Unfocused Inactive
-            "tab.unfocusedInactiveBackground"                     : "#ff0000",
+            "tab.unfocusedInactiveBackground"                     : "#181E2B",
             "tab.unfocusedInactiveForeground"                     : "#CFD8DC",
             "tab.unfocusedInactiveModifiedBorder"                 : "#ff0000",
 
@@ -2217,6 +2245,9 @@
 
             // Tree
             "tree.indentGuidesStroke"                             : "#FFF176",
+
+            // WalkThrough
+            "walkThrough.embeddedEditorBackground"                : "#ff0000",
 
             // Welcome Page
             "welcomePage.background"                              : "#222835",
