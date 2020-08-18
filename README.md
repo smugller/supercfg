@@ -11,6 +11,15 @@
 
 ![Visual Studio Code](https://i.imgur.com/OUsExPd.png)
 
+# How to use
+
+config status
+config add .zshrc
+config commit -m "Add zshrc file blah blah"
+config push
+
+More info how to manage .dotfiles here: https://www.atlassian.com/git/tutorials/dotfiles
+
 # Contact
 
 If you have any ideas or questions please contact with me somehow.
