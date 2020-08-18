@@ -268,6 +268,13 @@ function my-ext-ip()
   curl -s https://api.ipify.org && echo
 }
 
+function upgrade-everything()
+{
+  omz update
+  zplug update
+  brew upgrade
+}
+
 # testcolors
 alias testcolors1="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
 alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
