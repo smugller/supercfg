@@ -229,7 +229,7 @@
                 // Operator and sign equal [=]
                 "scope":
                 [
-                    "punctuation.separator.key-value.html"
+                    "punctuation.separator.key-value.html",
                 ],
                 "settings":
                 {
@@ -353,6 +353,7 @@
                 [
                     "entity.name.type.js",
                     "entity.name.function.js",
+                    "entity.name.function.tagged-template.js",
                 ],
                 "settings":
                 {
@@ -366,6 +367,8 @@
                 "scope":
                 [
                     "keyword.control.conditional.js",
+                    "keyword.control.default.js",
+                    "keyword.control.export.js",
                     "keyword.control.flow.js",
                     "keyword.control.loop.js",
                     "keyword.operator.arithmetic.js",
@@ -579,6 +582,8 @@
                     "keyword.control.flow.tsx",
                     "keyword.control.loop.ts",
                     "keyword.control.loop.tsx",
+                    "keyword.control.type.ts",
+                    "keyword.control.type.tsx",
                     "keyword.control.trycatch.ts",
                     "keyword.control.trycatch.tsx",
                     "keyword.operator.arithmetic.ts",
@@ -673,6 +678,7 @@
                     "constant.language.undefined.tsx",
                     "support.type.builtin.ts",
                     "support.type.builtin.tsx",
+                    "constant.other.character-class.regexp", // RegExp TODO: Move to other place
                 ],
                 "settings":
                 {
@@ -1408,11 +1414,13 @@
                 // " " , :
                 "scope":
                 [
+                    "punctuation.support.type.property-name.begin.json",
                     "punctuation.support.type.property-name.begin.json.comments",
+                    "punctuation.support.type.property-name.end.json",
                     "punctuation.support.type.property-name.end.json.comments",
-                    "punctuation.separator.dictionary.pair.json.comments",
-                    "punctuation.separator.dictionary.key-value.json.comments",
+                    "punctuation.definition.string.begin.json",
                     "punctuation.definition.string.begin.json.comments",
+                    "punctuation.definition.string.end.json",
                     "punctuation.definition.string.end.json.comments",
                 ],
                 "settings":
@@ -1422,12 +1430,27 @@
                 }
             },
             {
-                // String inside " string ", numeric and constants
+                // , in json on the end
                 "scope":
                 [
+                    "punctuation.separator.array.json",
+                    "punctuation.separator.array.json.comments",
+                    "punctuation.separator.dictionary.pair.json",
+                    "punctuation.separator.dictionary.pair.json.comments",
+                    "punctuation.separator.dictionary.key-value.json",
+                    "punctuation.separator.dictionary.key-value.json.comments",
+                ],
+                "settings":
+                {
+                    "foreground": "#ffffff",
+                }
+            },
+            {
+                // String inside " string "
+                "scope":
+                [
+                    "string.quoted.double.json",
                     "string.quoted.double.json.comments",
-                    "constant.language.json.comments",
-                    "constant.numeric.json.comments"
                 ],
                 "settings":
                 {
@@ -1436,10 +1459,27 @@
                 }
             },
             {
+                // Numeric and constants
+                "scope":
+                [
+                    "constant.language.json",
+                    "constant.language.json.comments",
+                    "constant.numeric.json",
+                    "constant.numeric.json.comments",
+                ],
+                "settings":
+                {
+                    "foreground": "#CE93D8",
+                    "fontStyle": ""
+                }
+            },
+            {
                 // Character Escape
                 "scope":
                 [
-                    "constant.character.escape.json"
+                    "constant.character.escape.json",
+                    "constant.character.escape.json.comments",
+
                 ],
                 "settings":
                 {
@@ -1447,7 +1487,6 @@
                     "fontStyle": ""
                 }
             },
-
             //========================================================================================
             // SHELL
             //========================================================================================
@@ -1914,7 +1953,7 @@
             "editorLink.activeForeground"                         : "#ff0000",
 
             // Marker Navigation
-            "editorMarkerNavigation.background"                   : "#ff0000",
+            "editorMarkerNavigation.background"                   : "#7389b9",
 
             // Marker Navigation Error
             "editorMarkerNavigationError.background"              : "#FF5252",

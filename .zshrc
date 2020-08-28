@@ -273,6 +273,7 @@ function upgrade-everything()
   omz update
   zplug update
   brew upgrade
+  ncu -g
 }
 
 # testcolors

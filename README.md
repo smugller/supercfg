@@ -13,10 +13,10 @@
 
 # How to use
 
-config status
-config add .zshrc
-config commit -m "Add zshrc file blah blah"
-config push
+- config status
+- config add .zshrc
+- config commit -m "Add zshrc file blahblah"
+- config push
 
 More info how to manage .dotfiles here: https://www.atlassian.com/git/tutorials/dotfiles
 
