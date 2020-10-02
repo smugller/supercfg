@@ -40,7 +40,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides"     : false,
     "editor.renderLineHighlight"    : "all",
-    "editor.renderWhitespace"       : "selection",
+    "editor.renderWhitespace"       : "none",
     "editor.rulers"                 : [],
 
     // Scroll
@@ -136,6 +136,7 @@
                 "settings":
                 {
                     "foreground": "#5d6874bd",
+                    "fontStyle" : "",
                 }
             },
             // String
@@ -596,6 +597,8 @@
                     "keyword.operator.comparison.tsx",
                     "keyword.operator.expression.delete.ts",
                     "keyword.operator.expression.delete.tsx",
+                    "keyword.operator.expression.import.ts",
+                    "keyword.operator.expression.import.tsx",
                     "keyword.operator.expression.in.ts",
                     "keyword.operator.expression.in.tsx",
                     "keyword.operator.expression.infer.ts",
@@ -646,6 +649,8 @@
                     "support.function.tsx",
                     "support.type.object.module.ts",
                     "support.type.object.module.tsx",
+                    "support.class.builtin.ts",
+                    "support.class.builtin.tsx",
                     "variable.language.this.ts",
                     "variable.language.this.tsx",
                 ],
@@ -880,6 +885,8 @@
                 [
                     "entity.name.type.interface.ts",
                     "entity.name.type.interface.tsx",
+                    "entity.name.type.alias.ts",
+                    "entity.name.type.alias.tsx",
                     //"entity.name.type.ts",
                     //"entity.name.type.tsx",
                     //"entity.name.type.enum.ts",
@@ -981,8 +988,6 @@
                 [
                     "entity.other.inherited-class.ts",
                     "entity.other.inherited-class.tsx",
-                    "entity.name.type.alias.ts",
-                    "entity.name.type.alias.tsx",
                 ],
                 "settings":
                 {
@@ -1019,6 +1024,21 @@
                 }
             },
             {
+                //  //Comment
+                "scope":
+                [
+                    "comment.line.double-slash.ts",
+                    "comment.line.double-slash.tsx",
+                    "punctuation.definition.comment.ts",
+                    "punctuation.definition.comment.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#5D6874BD",
+                    "fontStyle": ""
+                }
+            },
+            {
                 //  className=
                 "scope":
                 [
@@ -1031,6 +1051,8 @@
                     "fontStyle": "bold"
                 }
             },
+
+
 
             // #FFFFFF40 - Szary
             // #42A5F5   - Blue
@@ -1063,6 +1085,21 @@
                 }
             },
             {
+                // comment block
+                "scope":
+                [
+                    "comment.block.css",
+                    "comment.block.scss",
+                    "punctuation.definition.comment.css",
+                    "punctuation.definition.comment.scss",
+                ],
+                "settings":
+                {
+                    "foreground": "#5D6874BD",
+                    "fontStyle": ""
+                }
+            },
+            {
                 // Quote " "
                 "scope":
                 [
@@ -1088,7 +1125,8 @@
                 ],
                 "settings":
                 {
-                    "foreground": "#9E9E9E",
+                    //"foreground": "#9E9E9E",
+                    "foreground": "#E57373",
                     "fontStyle": "bold"
                 }
             },
@@ -1359,6 +1397,8 @@
                     "keyword.control.if.scss",
                     "keyword.control.while.css",
                     "keyword.control.while.scss",
+                    "keyword.operator.logical.css",
+                    "keyword.operator.logical.scss",
                     "meta.property-list.css",  // + sign like &
                     "meta.property-list.scss",  // + sign like &
                 ],
@@ -1611,6 +1651,10 @@
                 }
             },
             //========================================================================================
+            // CUSTOM
+            //========================================================================================
+            // ...
+            //========================================================================================
             // BLANK
             //========================================================================================
             // Blank
@@ -1625,6 +1669,7 @@
                     "fontStyle": "bold"
                 }
             },
+
         ]
     },
 
@@ -1793,7 +1838,7 @@
             "debugTokenExpression.value"                          : "#ff0000",
 
             // Debug ToolBar
-            "debugToolBar.background"                             : "#ff0000",
+            "debugToolBar.background"                             : "#00ff00",
             "debugToolBar.border"                                 : "#ff0000",
 
             // Debug View
@@ -1914,7 +1959,7 @@
             "editorCursor.foreground"                             : "#FDD835",
 
             // Group
-            "editorGroup.border"                                  : "#FDD835",
+            "editorGroup.border"                                  : "#181E2B",
             "editorGroup.dropBackground"                          : "#b1bec499",
             "editorGroup.emptyBackground"                         : "#222835",
             "editorGroup.focusedEmptyBorder"                      : "#FDD835",
@@ -2043,10 +2088,10 @@
 
             // Git colors on sidebar list
             "gitDecoration.addedResourceForeground"               : "#536DFE",
-            "gitDecoration.conflictingResourceForeground"         : "#FFD740",
+            "gitDecoration.conflictingResourceForeground"         : "#FFB74D",
             "gitDecoration.deletedResourceForeground"             : "#FF5252",
             "gitDecoration.ignoredResourceForeground"             : "#8D6E63",
-            "gitDecoration.modifiedResourceForeground"            : "#00C853",
+            "gitDecoration.modifiedResourceForeground"            : "#FFE57F",
             "gitDecoration.submoduleResourceForeground"           : "#18FFFF",
             "gitDecoration.untrackedResourceForeground"           : "#E040FB",
 
@@ -2798,7 +2843,12 @@
     // Paste and Indent - Plugin
     // URL: https://github.com/rubymaniac/vscode-paste-and-indent
     //---------------------------------------
-    "pasteAndIndent.selectAfter"        : true,
+    "pasteAndIndent.selectAfter": true,
+    "browser-preview.startUrl": "http://localhost:3000/",
+    //"browser-preview.startUrl":         // The default start url for new Browser Preview instances
+    //"browser-preview.verbose": false    // Enable verbose logging of messages sent between VS Code and Chrome instance
+    //"browser-preview.chromeExecutable": // The full path to the executable, including the complete filename of the executable
+    //"browser-preview.format":           // Option to set the type of rendering with the support for `jpeg` (default one) and `png` formats
 
     //---------------------------------------
     // Raibow CSV - Plugin
@@ -2964,5 +3014,9 @@
     // "twig-language-2.braceStyle"      : "collapse",
     // "twig-language-2.braces"          : false,
     // TODO:
+
+    "macColorPicker.defaultColorNotation"   :   "hsl",  // Which notation to use when inserting (rather than updating) a color
+    "macColorPicker.lowercaseHexColors"     :   true,   // Output hex colors in lowercase, e.g.: `#fff` instead of `#FFF`
+    "macColorPicker.shortHexColors"         :   false   // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
 
 }

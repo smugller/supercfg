@@ -273,7 +273,8 @@ function upgrade-everything()
   omz update
   zplug update
   brew upgrade
-  ncu -g
+  npm install -g npm@latest
+  npm install -g npm-check-updates@latest
 }
 
 # testcolors
