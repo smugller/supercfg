@@ -270,11 +270,23 @@ function my-ext-ip()
 
 function upgrade-everything()
 {
+  echo "\033[0;91m ============== START =============="
+  echo "\033[0;91m == 1/2 == Updating Oh My Zsh ...   "
   omz update
+  echo "\033[1;32m == 2/2 == Updating Oh My Zsh ... OK"
+  echo "\033[0;91m == 1/2 == Updating zplug     ...   "
   zplug update
+  echo "\033[1;32m == 2/2 == Updating zplug     ... OK"
+  echo "\033[0;91m == 1/2 == Updating Homebrew  ...   "
   brew upgrade
+  echo "\033[1;32m == 2/2 == Updating Homebrew  ... OK"
+  echo "\033[0;91m == 1/2 == Updating npm       ...   "
   npm install -g npm@latest
+  echo "\033[1;32m == 2/2 == Updating npm       ... OK"
+  echo "\033[0;91m == 1/2 == Updating ncu       ...   "
   npm install -g npm-check-updates@latest
+  echo "\033[1;32m == 2/2 == Updating ncu       ... OK"
+  echo "\033[1;32m ============== Done ==============="
 }
 
 # testcolors

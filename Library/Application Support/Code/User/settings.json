@@ -2087,13 +2087,22 @@
             "foreground"                                          : "#CFD8DC",
 
             // Git colors on sidebar list
-            "gitDecoration.addedResourceForeground"               : "#536DFE",
-            "gitDecoration.conflictingResourceForeground"         : "#FFB74D",
-            "gitDecoration.deletedResourceForeground"             : "#FF5252",
-            "gitDecoration.ignoredResourceForeground"             : "#8D6E63",
-            "gitDecoration.modifiedResourceForeground"            : "#FFE57F",
-            "gitDecoration.submoduleResourceForeground"           : "#18FFFF",
-            "gitDecoration.untrackedResourceForeground"           : "#E040FB",
+            // "gitDecoration.addedResourceForeground"               : "#536DFE",
+            // "gitDecoration.conflictingResourceForeground"         : "#FFB74D",
+            // "gitDecoration.deletedResourceForeground"             : "#FF5252",
+            // "gitDecoration.ignoredResourceForeground"             : "#8D6E63",
+            // "gitDecoration.modifiedResourceForeground"            : "#FFE57F",
+            // "gitDecoration.submoduleResourceForeground"           : "#18FFFF",
+            // "gitDecoration.untrackedResourceForeground"           : "#E040FB",
+
+            // Git colors on sidebar list
+            "gitDecoration.addedResourceForeground"               : "#CFD8DC",
+            "gitDecoration.conflictingResourceForeground"         : "#CFD8DC",
+            "gitDecoration.deletedResourceForeground"             : "#CFD8DC",
+            "gitDecoration.ignoredResourceForeground"             : "#CFD8DC",
+            "gitDecoration.modifiedResourceForeground"            : "#CFD8DC",
+            "gitDecoration.submoduleResourceForeground"           : "#CFD8DC",
+            "gitDecoration.untrackedResourceForeground"           : "#CFD8DC",
 
             // Icon
             "icon.foreground"                                     : "#FDD835",
@@ -2516,7 +2525,7 @@
             "titleBar.inactiveForeground"                         : "#FDD835",
 
             // Tree
-            "tree.indentGuidesStroke"                             : "#FFF176",
+            "tree.indentGuidesStroke"                             : "#42A5F5",
 
             // WalkThrough
             "walkThrough.embeddedEditorBackground"                : "#ff0000",
