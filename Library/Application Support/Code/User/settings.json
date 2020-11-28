@@ -3026,6 +3026,7 @@
 
     "macColorPicker.defaultColorNotation"   :   "hsl",  // Which notation to use when inserting (rather than updating) a color
     "macColorPicker.lowercaseHexColors"     :   true,   // Output hex colors in lowercase, e.g.: `#fff` instead of `#FFF`
-    "macColorPicker.shortHexColors"         :   false   // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
+    "macColorPicker.shortHexColors": false,
+    "extensions.ignoreRecommendations": true // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
 
 }
