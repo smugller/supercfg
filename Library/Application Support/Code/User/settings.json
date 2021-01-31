@@ -12,7 +12,7 @@
     //---------------------------------------
     // Breadcrumbs
     //---------------------------------------
-    "breadcrumbs.enabled"           : false,
+    "breadcrumbs.enabled"           : true,
 
     //---------------------------------------
     // Editor
@@ -25,10 +25,10 @@
     // Font
     "editor.fontFamily"             : "FiraCode-Retina",   // v5.2
     "editor.fontLigatures"          : true,
-    "editor.fontSize"               : 13,
-    "editor.fontWeight"             : "400",               // 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
+    "editor.fontSize"               : 12,                  //  13 - Default
+    "editor.fontWeight"             : "400",               // 400 - Default || 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
     "editor.letterSpacing"          : 0,
-    "editor.lineHeight"             : 19,
+    "editor.lineHeight"             : 12,                  //  19 - Default
 
     // General
     "editor.lineNumbers"            : "on",
@@ -533,6 +533,8 @@
                     "keyword.control.from.tsx",
                     "keyword.control.as.ts",
                     "keyword.control.as.tsx",
+                    "keyword.control.switch.ts",
+                    "keyword.control.switch.tsx"
                 ],
                 "settings":
                 {
@@ -706,6 +708,8 @@
                     "punctuation.definition.string.template.end.tsx",
                     "punctuation.terminator.statement.ts",
                     "punctuation.terminator.statement.tsx",
+                    "punctuation.definition.section.case-statement.ts",
+                    "punctuation.definition.section.case-statement.tsx",
                 ],
                 "settings":
                 {
@@ -719,6 +723,8 @@
                 [
                     "punctuation.accessor.ts",
                     "punctuation.accessor.tsx",
+                    "punctuation.accessor.optional.ts",
+                    "punctuation.accessor.optional.tsx"
                 ],
                 "settings":
                 {
@@ -793,6 +799,9 @@
                 [
                     "punctuation.separator.comma.ts",
                     "punctuation.separator.comma.tsx",
+                    "punctuation.separator.parameter.ts",
+                    "punctuation.separator.parameter.tsx"
+
                 ],
                 "settings":
                 {
@@ -1170,13 +1179,27 @@
                     "punctuation.definition.attribute-selector.begin.bracket.square.scss",
                     "punctuation.definition.attribute-selector.end.bracket.square.css",
                     "punctuation.definition.attribute-selector.end.bracket.square.scss",
+                    // "punctuation.definition.entity.css",
+                    // "punctuation.definition.entity.scss",
+                    //"punctuation.section.function.scss"
+                ],
+                "settings":
+                {
+                    "foreground": "#ffffff",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // ( ) and : and [ ] and [.]something
+                "scope":
+                [
                     "punctuation.definition.entity.css",
                     "punctuation.definition.entity.scss",
                     //"punctuation.section.function.scss"
                 ],
                 "settings":
                 {
-                    "foreground": "#ffffff",
+                    "foreground": "#FFE0B2",
                     "fontStyle": "bold"
                 }
             },
@@ -1215,6 +1238,8 @@
                     "keyword.other.unit.s.scss",
                     "keyword.other.unit.vw.css",
                     "keyword.other.unit.vw.scss",
+                    "keyword.other.unit.vh.css",
+                    "keyword.other.unit.vh.scss",
                     "support.constant.mathematical-symbols.css",
                     "support.constant.mathematical-symbols.scss",
                     "meta.property-value.css",
@@ -1650,6 +1675,75 @@
                     "fontStyle": "bold"
                 }
             },
+            //========================================================================================
+            // GraphQL
+            //========================================================================================
+            {
+                // query etc.
+                "scope":
+                [
+                    "keyword.fragment.graphql",
+                    "keyword.operation.graphql",
+                    "keyword.type.graphql",
+                    "keyword.operator.nulltype.graphql",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFA759",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Function name
+                "scope":
+                [
+                    "entity.name.function.graphql",
+                    "variable.parameter.graphql",
+                    "support.type.graphql",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Parameter like "limit" etc.
+                "scope":
+                [
+                    "support.type.builtin.graphql"
+                ],
+                "settings":
+                {
+                    "foreground": "#CE93D8",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Numeric
+                "scope":
+                [
+                    "constant.numeric.float.graphql",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Brackets { }
+                "scope":
+                [
+                    "punctuation.operation.graphql",
+                ],
+                "settings":
+                {
+                    "foreground": "#00a5fc",
+                    "fontStyle": "bold"
+                }
+            },
+
             //========================================================================================
             // CUSTOM
             //========================================================================================
@@ -3026,6 +3120,7 @@
 
     "macColorPicker.defaultColorNotation"   :   "hsl",  // Which notation to use when inserting (rather than updating) a color
     "macColorPicker.lowercaseHexColors"     :   true,   // Output hex colors in lowercase, e.g.: `#fff` instead of `#FFF`
-    "macColorPicker.shortHexColors"         :   false   // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
+    "macColorPicker.shortHexColors": false,
+    "extensions.ignoreRecommendations": true // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
 
 }
