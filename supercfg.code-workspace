@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "scripts/abmundo"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "./backend/node_modules/typescript/lib"
+	}
+}
