@@ -389,10 +389,26 @@
                     "support.function.js",
                     "support.type.object.module.js",
                     "variable.language.this.js",
+                    "meta.delimiter.comma.js",
+                    "keyword.control.module.js",
+                    "keyword.control.module.reference.js"
                 ],
                 "settings":
                 {
                     "foreground": "#FFA759",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Module
+                "scope":
+                [
+                    "keyword.operator.accessor.js",
+                    "keyword.operator.module.all.js"
+                ],
+                "settings":
+                {
+                    "foreground": "#FF5252",
                     "fontStyle": "bold"
                 }
             },
@@ -470,6 +486,8 @@
                 "scope":
                 [
                     "punctuation.separator.comma.js",
+                    "keyword.operator.quantifier.regexp",
+                    "constant.character.escape.backslash.regexp",
                 ],
                 "settings":
                 {
@@ -486,6 +504,21 @@
                 "settings":
                 {
                     "foreground": "#9E9E9E",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // RegExp
+                "scope":
+                [
+                    "keyword.control.anchor.regexp",
+                    "string.regexp.js",
+                    "support.type.object.node.js",
+                    "support.type.object.process.js",
+                ],
+                "settings":
+                {
+                    "foreground": "#CE93D8",
                     "fontStyle": "bold"
                 }
             },
@@ -513,11 +546,24 @@
                 [
                     "meta.object-literal.key.js",
                     "punctuation.separator.key-value.js",
+                    "string.unquoted.js"
                 ],
                 "settings":
                 {
                     "foreground": "#ffffff",
                     "fontStyle": "bold"
+                }
+            },
+            {
+                //  String unquoted
+                "scope":
+                [
+                    "string.unquoted.js",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFFFFFDA",
+                    "fontStyle": ""
                 }
             },
             //========================================================================================
@@ -581,14 +627,10 @@
                     "keyword.control.default.tsx",
                     "keyword.control.export.ts",
                     "keyword.control.export.tsx",
-                    "keyword.control.flow.ts",
-                    "keyword.control.flow.tsx",
                     "keyword.control.loop.ts",
                     "keyword.control.loop.tsx",
                     "keyword.control.type.ts",
                     "keyword.control.type.tsx",
-                    "keyword.control.trycatch.ts",
-                    "keyword.control.trycatch.tsx",
                     "keyword.operator.arithmetic.ts",
                     "keyword.operator.arithmetic.tsx",
                     "keyword.operator.assignment.compound.ts",
@@ -625,8 +667,6 @@
                     "keyword.operator.ternary.tsx",
                     "keyword.operator.type.ts",
                     "keyword.operator.type.tsx",
-                    "storage.modifier.async.ts",
-                    "storage.modifier.async.tsx",
                     "storage.modifier.ts",
                     "storage.modifier.tsx",
                     "storage.type.enum.ts",
@@ -685,6 +725,8 @@
                     "constant.language.undefined.tsx",
                     "support.type.builtin.ts",
                     "support.type.builtin.tsx",
+                    "constant.character.escape.ts",
+                    "constant.character.escape.tsx",
                     "constant.other.character-class.regexp", // RegExp TODO: Move to other place
                 ],
                 "settings":
@@ -896,6 +938,8 @@
                     "entity.name.type.interface.tsx",
                     "entity.name.type.alias.ts",
                     "entity.name.type.alias.tsx",
+                    "keyword.control.flow.ts",
+                    "keyword.control.flow.tsx",
                     //"entity.name.type.ts",
                     //"entity.name.type.tsx",
                     //"entity.name.type.enum.ts",
@@ -904,6 +948,19 @@
                 "settings":
                 {
                     "foreground": "#E57373",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // async ()
+                "scope":
+                [
+                    "storage.modifier.async.ts",
+                    "storage.modifier.async.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#50FA7B",
                     "fontStyle": "bold"
                 }
             },
@@ -927,6 +984,8 @@
                 [
                     "entity.name.type.enum.ts",
                     "entity.name.type.enum.tsx",
+                    "keyword.control.trycatch.ts",
+                    "keyword.control.trycatch.tsx",
                 ],
                 "settings":
                 {
@@ -1057,6 +1116,25 @@
                 "settings":
                 {
                     "foreground": "#ffffff",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // RegExp
+                "scope":
+                [
+                    "keyword.control.anchor.regexp.ts",
+                    "keyword.control.anchor.regexp.tsx",
+                    "string.regexp.ts",
+                    "string.regexp.tsx",
+                    "support.type.object.node.ts",
+                    "support.type.object.node.tsx",
+                    "support.type.object.process.ts",
+                    "support.type.object.process.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#CE93D8",
                     "fontStyle": "bold"
                 }
             },
