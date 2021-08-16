@@ -111,7 +111,7 @@ eval "$(phpenv init -)"
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
+# see "man strftime" for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
@@ -142,9 +142,9 @@ plugins=(
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   export EDITOR="vim"
 # else
-#   export EDITOR='mvim'
+#   export EDITOR="mvim"
 # fi
 
 # Compilation flags
@@ -210,9 +210,9 @@ alias  ll="lsd -a --group-dirs first"
 alias lll="lsd -la --group-dirs first"
 alias  lt="lsd --tree"
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias   ..="cd .."
+alias  ...="cd ../.."
+alias ....="cd ../../.."
 
 # Functions
 
@@ -222,7 +222,7 @@ function weather() {
 }
 
 # cheat-sheet in terminal
-function cheat-sheet() {
+function cheatsheet() {
   curl "https://cht.sh/$1"
 }
 
@@ -231,13 +231,20 @@ function npm-global-variables() {
   npm list -g --depth 0
 }
 
-#  glances - https://github.com/nicolargo/glances
-function system-info() {
-  glances
+# Check my local IP
+function localip() {
+  ifconfig -l | xargs -n1 ipconfig getifaddr
 }
 
-# Docker devilbox commands
+# Check my external IP
+function publicip()
+{
+  curl -s https://api.ipify.org && echo
+}
 
+#
+# Docker devilbox commands START
+#
 function d-start() {
   cd $HOME/scripts/devilbox/
   docker-compose up -d httpd php mysql memcd
@@ -261,13 +268,11 @@ function d-update-dependencies() {
   gotodev
   npx npm-check-updates -u
 }
+#
+# Docker devilbox commands END
+#
 
-# Check my external IP
-function my-ext-ip()
-{
-  curl -s https://api.ipify.org && echo
-}
-
+# Upgrade everything
 function upgrade-everything()
 {
   echo "\033[0;91m ============== START =============="
@@ -291,11 +296,31 @@ function upgrade-everything()
 
 # testcolors
 alias testcolors1="curl -s https://gist.githubusercontent.com/WoLpH/8b6f697ecc06318004728b8c0127d9b3/raw/colortest.py | python3 "
-alias testcolors2='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
+alias testcolors2="for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f""
+
+function commands() {
+  echo "\033[0;91m ============== ALL COMMANDS AVAILABLE =============="
+  echo "weather [city]"
+  echo "cheatsheet [command]"
+  echo "npm-global-variables"
+  echo "glances"
+  echo "neofetch"
+  echo "localip"
+  echo "publicip"
+  echo "testcolors1"
+  echo "testcolors2"
+  echo "upgrade-everything (omz update)"
+  echo "                   (zplug update)"
+  echo "                   (brew upgrade)"
+  echo "                   (npm install -g npm@latest)"
+  echo "                   (npm install -g npm-check-updates@latest)"
+  echo ".dotfiles"
+  echo "\033[0;91m ===================================================="
+}
 
 # Manager .dotfiles
 # https://www.atlassian.com/git/tutorials/dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.supercfg/ --work-tree=$HOME'
+alias config="/usr/bin/git --git-dir=$HOME/.supercfg/ --work-tree=$HOME"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

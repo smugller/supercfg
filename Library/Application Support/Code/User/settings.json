@@ -24,15 +24,15 @@
 
     // Font
     "editor.fontFamily"             : "FiraCode-Retina",   // v5.2
-    "editor.fontLigatures"          : true,
-    "editor.fontSize"               : 12,                  //  13 - Default
+    "editor.fontLigatures"          : false,
+    "editor.fontSize"               : 13,                  //  13 - Default
     "editor.fontWeight"             : "400",               // 400 - Default || 300 - Light, 400 - Regular, 500 - Medium, 600 - Bold
     "editor.letterSpacing"          : 0,
-    "editor.lineHeight"             : 12,                  //  19 - Default
+    "editor.lineHeight"             : 14,                  //  19 - Default
 
     // General
     "editor.lineNumbers"            : "on",
-    "editor.minimap.enabled"        : true,
+    "editor.minimap.enabled"        : false,
     "editor.minimap.scale"          : 2,
     "editor.overviewRulerBorder"    : false,
 
@@ -559,11 +559,28 @@
                 "scope":
                 [
                     "string.unquoted.js",
+                    "support.type.object.console.js",
                 ],
                 "settings":
                 {
                     "foreground": "#FFFFFFDA",
                     "fontStyle": ""
+                }
+            },
+            //========================================================================================
+            // JSX - JavaScript JSX
+            //========================================================================================
+            {
+                // Keywords like [Import], [From] , [as] etc.
+                "scope":
+                [
+                    "entity.name.tag.open.jsx",
+                    "punctuation.definition.tag.jsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                    "fontStyle": "bold"
                 }
             },
             //========================================================================================
@@ -639,6 +656,8 @@
                     "keyword.operator.assignment.tsx",
                     "keyword.operator.comparison.ts",
                     "keyword.operator.comparison.tsx",
+                    "keyword.operator.definiteassignment.ts",
+                    "keyword.operator.definiteassignment.tsx",
                     "keyword.operator.expression.delete.ts",
                     "keyword.operator.expression.delete.tsx",
                     "keyword.operator.expression.import.ts",
@@ -647,12 +666,12 @@
                     "keyword.operator.expression.in.tsx",
                     "keyword.operator.expression.infer.ts",
                     "keyword.operator.expression.infer.tsx",
+                    "keyword.operator.expression.instanceof.ts",
+                    "keyword.operator.expression.instanceof.tsx",
                     "keyword.operator.expression.keyof.ts",
                     "keyword.operator.expression.keyof.tsx",
                     "keyword.operator.expression.typeof.ts",
                     "keyword.operator.expression.typeof.tsx",
-                    "keyword.operator.expression.instanceof.ts",
-                    "keyword.operator.expression.instanceof.tsx",
                     "keyword.operator.increment.ts",
                     "keyword.operator.increment.tsx",
                     "keyword.operator.logical.ts",
@@ -677,6 +696,8 @@
                     "storage.type.function.tsx",
                     "storage.type.interface.ts",
                     "storage.type.interface.tsx",
+                    "storage.type.namespace.ts",
+                    "storage.type.namespace.tsx",
                     "storage.type.property.ts",
                     "storage.type.property.tsx",
                     "storage.type.ts",
@@ -1138,6 +1159,20 @@
                     "fontStyle": "bold"
                 }
             },
+            {
+                // Decorators
+                "scope":
+                [
+                    "punctuation.decorator.ts",
+                    "punctuation.decorator.tsx"
+
+                ],
+                "settings":
+                {
+                    "foreground": "#42A5F5",
+                    "fontStyle": "bold"
+                }
+            },
 
 
 
@@ -1163,7 +1198,6 @@
                     "entity.name.function.css",
                     "entity.name.function.scss",
                     "entity.name.tag.css",
-                    "entity.name.tag.scss",
                 ],
                 "settings":
                 {
@@ -1196,6 +1230,7 @@
                     "punctuation.definition.string.end.scss",
                     "punctuation.separator.list.comma.css",
                     "punctuation.separator.list.comma.scss",
+                    // "punctuation.semi-colon.css"
                 ],
                 "settings":
                 {
@@ -1273,7 +1308,9 @@
                 [
                     "punctuation.definition.entity.css",
                     "punctuation.definition.entity.scss",
+                    "constant.language.pseudo.css",
                     //"punctuation.section.function.scss"
+
                 ],
                 "settings":
                 {
@@ -1341,6 +1378,7 @@
                     "meta.definition.variable.scss",
                     "support.constant.font-name.css",
                     "support.constant.font-name.scss",
+                    "meta.identifier.css"
                 ],
                 "settings":
                 {
@@ -1403,7 +1441,7 @@
                 ],
                 "settings":
                 {
-                    "foreground": "#FFE0B2",
+                    "foreground": "#E57373",
                     "fontStyle": "bold"
                 }
             },
@@ -1472,7 +1510,7 @@
                 ],
                 "settings":
                 {
-                    "foreground": "#00E676",
+                    "foreground": "#2196F3",
                     "fontStyle": "bold"
                 }
             },
@@ -1502,6 +1540,8 @@
                     "keyword.control.while.scss",
                     "keyword.operator.logical.css",
                     "keyword.operator.logical.scss",
+                    "keyword.operator.pseudo.css",
+                    "keyword.operator.pseudo.scss",
                     "meta.property-list.css",  // + sign like &
                     "meta.property-list.scss",  // + sign like &
                 ],
@@ -1521,6 +1561,20 @@
                 "settings":
                 {
                     "foreground": "#E57373",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Custom entity tag other colors
+                "scope":
+                [
+                    "entity.name.tag.all.css",
+                    "keyword.operator.parent.css",
+                    "support.function.css",
+                ],
+                "settings":
+                {
+                    "foreground": "#00E676",
                     "fontStyle": "bold"
                 }
             },
@@ -3025,7 +3079,11 @@
     // URL: https://github.com/rubymaniac/vscode-paste-and-indent
     //---------------------------------------
     "pasteAndIndent.selectAfter": true,
-    "browser-preview.startUrl": "http://localhost:3000/",
+
+    //---------------------------------------
+    // Browser plugin:
+    //---------------------------------------
+    //"browser-preview.startUrl": "http://localhost:3000/",
     //"browser-preview.startUrl":         // The default start url for new Browser Preview instances
     //"browser-preview.verbose": false    // Enable verbose logging of messages sent between VS Code and Chrome instance
     //"browser-preview.chromeExecutable": // The full path to the executable, including the complete filename of the executable
@@ -3199,6 +3257,7 @@
     "macColorPicker.defaultColorNotation"   :   "hsl",  // Which notation to use when inserting (rather than updating) a color
     "macColorPicker.lowercaseHexColors"     :   true,   // Output hex colors in lowercase, e.g.: `#fff` instead of `#FFF`
     "macColorPicker.shortHexColors": false,
-    "extensions.ignoreRecommendations": true // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.wrapTabs": true // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
 
 }
