@@ -86,6 +86,12 @@
         // "type"          : "#ff0000",
         // "typeParameter" : "#ff0000",
         // "variable"      : "#ff0000",
+
+        "rules": {
+            // "enum": "#ff0000"
+            // "method": "#ff0000"
+            // "enumMember": "#ff0000"
+        }
     },
 
     // Tokens Customization
@@ -97,7 +103,7 @@
         // "numbers"             : "#ff0000",
         // "strings"             : "#FFF176",
         // "types"               : "#ff0000",
-        // "variables"           : "#ff0000",
+        "variables"           : "#ffffff",
 
         // Text Mate Rules
         "textMateRules": [
@@ -147,8 +153,8 @@
                 ],
                 "settings":
                 {
-                    //"foreground": "#FFF59D",
-                    "foreground": "#FFF59D"
+                    "foreground": "#FFF59D",
+                    // "fontStyle": "bold"
                 }
             },
             // Keyword
@@ -170,7 +176,18 @@
                 ],
                 "settings":
                 {
-                    //"foreground": "#50FA7B"
+                    "foreground": "#50FA7B"
+                }
+            },
+            // SUPPORT TYPE
+            {
+                "scope":
+                [
+                    "support.type",
+                ],
+                "settings":
+                {
+                    "foreground": "#50FA7B"
                 }
             },
             // Support Class
@@ -182,6 +199,18 @@
                 "settings":
                 {
                     "foreground": "#ffffff"
+                }
+            },
+            // Storage Type
+            {
+                "scope":
+                [
+                    "storage.type"
+                ],
+                "settings":
+                {
+                    "foreground": "#CCCAC2",
+                    "fontStyle": "italic"
                 }
             },
             //========================================================================================
@@ -606,6 +635,32 @@
                 }
             },
             {
+                // Import [variable] from ...
+                "scope":
+                [
+                    "variable.other.readwrite.alias.ts",
+                    "variable.other.readwrite.alias.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#CCCAC2",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Import [variable] from ...
+                "scope":
+                [
+                    "variable.other.constant.object.ts",
+                    "variable.other.constant.object.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#CCCAC2",
+                    // "fontStyle": "bold"
+                }
+            },
+            {
                 // [*]
                 "scope":
                 [
@@ -624,6 +679,7 @@
                 [
                     // "entity.name.type.ts",
                     // "entity.name.type.tsx",
+                    "entity.name.function.member",
                     "entity.name.function.tsx",
                     "entity.name.function.ts",
                 ],
@@ -672,6 +728,8 @@
                     "keyword.operator.expression.keyof.tsx",
                     "keyword.operator.expression.typeof.ts",
                     "keyword.operator.expression.typeof.tsx",
+                    "keyword.operator.expression.of.ts",
+                    "keyword.operator.expression.of.tsx",
                     "keyword.operator.increment.ts",
                     "keyword.operator.increment.tsx",
                     "keyword.operator.logical.ts",
@@ -716,18 +774,6 @@
                     "support.class.builtin.tsx",
                     "variable.language.this.ts",
                     "variable.language.this.tsx",
-                ],
-                "settings":
-                {
-                    "foreground": "#FFA759",
-                    "fontStyle": "bold"
-                }
-            },
-            {
-                // SUPPORT CONSTANTS LIKE documentElement.style etc.
-                "scope":
-                [
-                    "support.constant"
                 ],
                 "settings":
                 {
@@ -838,6 +884,18 @@
                 }
             },
             {
+                // Brackets ${ variable }
+                "scope":
+                [
+                    "string.quoted.double.tsx"
+                ],
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                    "fontStyle": "bold"
+                }
+            },
+            {
 
                 // Brackets < >
                 "scope":
@@ -877,7 +935,7 @@
                     "punctuation.separator.comma.ts",
                     "punctuation.separator.comma.tsx",
                     "punctuation.separator.parameter.ts",
-                    "punctuation.separator.parameter.tsx"
+                    "punctuation.separator.parameter.tsx",
 
                 ],
                 "settings":
@@ -917,6 +975,8 @@
                     "variable.other.readwrite.tsx",
                     "variable.parameter.ts",
                     "variable.parameter.tsx",
+                    "meta.definition.variable.ts",
+                    "meta.definition.variable.tsx"
                 ],
                 "settings":
                 {
@@ -1051,7 +1111,7 @@
                 ],
                 "settings":
                 {
-                    "foreground": "#a78bfa",
+                    "foreground": "#A78BFA",
                     "fontStyle": "bold"
                 }
             },
@@ -1122,6 +1182,20 @@
                 "settings":
                 {
                     "foreground": "#E57373",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                //  Enums
+                "scope":
+                [
+                    "variable.other.enummember",
+                    "variable.other.enummember.ts",
+                    "variable.other.enummember.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#CE93D8",
                     "fontStyle": "bold"
                 }
             },
@@ -1201,14 +1275,44 @@
                     "fontStyle": "bold"
                 }
             },
+            {
+                // Other
+                "scope":
+                [
+                    "meta.definition.property.tsx",
+                    "meta.field.declaration.tsx",
+                    "meta.interface.tsx",
+                    "variable.other.constant.property.ts"
+                ],
+                "settings":
+                {
+                    "foreground": "#A78BFA",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Other
+                "scope":
+                [
+                    "support.variable.ts",
+                    "support.variable.tsx",
+                    "support.variable.property",
+                    "support.variable.property.ts",
+                    "support.variable.property.tsx",
+                    "support.constant.property"
+                ],
+                "settings":
+                {
+                    "foreground": "#A78BFA",
+                    "fontStyle": "bold"
+                }
+            },
 
-
-
-            // #FFFFFF40 - Szary
-            // #42A5F5   - Blue
+            // #FFFFFF40 - Gray
+            // #42A5F5   - Blue Sky
             // #E57373   - Red Soft
             // #50FA7B   - Green Dracula
-            // #FFF59D   - Żółty jasny
+            // #FFF59D   - Yellow Desert
             // #FFA759   - Orange
             //========================================================================================
             // Visual Basic
@@ -1310,12 +1414,24 @@
                     "support.function.misc.scss",
                     "entity.name.function.css",
                     "entity.name.function.scss",
-                    "entity.name.tag.css",
+                    // "entity.name.tag.css",
                 ],
                 "settings":
                 {
                     "foreground": "#FFA759",
                     "fontStyle": "bold"
+                }
+            },
+            {
+                // content: ""
+                "scope":
+                [
+                    "entity.name.tag.css",
+                ],
+                "settings":
+                {
+                    "foreground": "#E0E0E0",
+                    "fontStyle": ""
                 }
             },
             {
@@ -1383,12 +1499,25 @@
                 "scope":
                 [
                     "support.type.property-name.css",
-                    "support.type.property-name.scss"
+                    "support.type.property-name.scss",
                 ],
                 "settings":
                 {
                     "foreground": "#E0E0E0",
                     "fontStyle": ""
+                }
+            },
+            {
+                // Vendor / Browser special property
+                "scope":
+                [
+                    "support.type.vendored.property-name.css",
+                    "support.type.vendored.property-name.scss"
+                ],
+                "settings":
+                {
+                    "foreground": "#E0E0E0",
+                    "fontStyle": "italic bold"
                 }
             },
             {
@@ -1542,7 +1671,7 @@
                 "settings":
                 {
                     "foreground": "#9E9E9E",
-                    "fontStyle": ""
+                    "fontStyle": "bold"
                 }
             },
             {
@@ -1717,6 +1846,53 @@
                     "fontStyle": "bold"
                 }
             },
+            {
+                //
+                "scope":
+                [
+                    "support.function.transform.css",
+                    "support.function.transform.scss",
+                    "support.function.calc.css",
+                    "support.function.calc.scss",
+                    "support.function.timing-function.css",
+                    "support.function.timing-function.scss",
+                    "keyword.control.at-rule.keyframes.scss"
+                ],
+                "settings":
+                {
+                    "foreground": "#A78BFA",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                //
+                "scope":
+                [
+                    "entity.other.attribute-name.css",
+                    "entity.other.attribute-name.scss",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFF59D",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // CSS Variables
+                "scope":
+                [
+                    "variable.argument.css",
+                    "variable.argument.scss",
+                    "meta.property-name.css",
+                    "meta.property-name.scss"
+                ],
+                "settings":
+                {
+                    "foreground": "#E57373",
+                    "fontStyle": "bold italic"
+                }
+            },
+
             //========================================================================================
             // JSON
             //========================================================================================
@@ -1988,11 +2164,11 @@
                     "fontStyle": "bold"
                 }
             },
-
             //========================================================================================
             // CUSTOM
             //========================================================================================
             // ...
+
             //========================================================================================
             // BLANK
             //========================================================================================
@@ -2064,7 +2240,6 @@
     // Workbench
     //---------------------------------------
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme"         : "Ayu Mirage Bordered",
     "workbench.editor.tabSizing"   : "shrink",
     "workbench.fontAliasing"       : "antialiased",
     "workbench.iconTheme"          : "vscode-great-icons",
@@ -2398,13 +2573,13 @@
             // Widget Suggest
             "editorSuggestWidget.background"                      : "#181E2B",
             "editorSuggestWidget.border"                          : "#181E2B",
-            "editorSuggestWidget.foreground"                      : "#a78bfa",
-            "editorSuggestWidget.highlightForeground"             : "#a78bfa",
+            "editorSuggestWidget.foreground"                      : "#A78BFA",
+            "editorSuggestWidget.highlightForeground"             : "#A78BFA",
             "editorSuggestWidget.selectedBackground"              : "#616161",
-            "editorSuggestWidget.selectedForeground"              : "#a78bfa",
-            "editorSuggestWidget.selectedIconForeground"          : "#a78bfa",
-            "editorSuggestWidget.focusHighlightForeground"        : "#a78bfa",
-            "editorSuggestWidgetStatus.foreground"                : "#a78bfa",
+            "editorSuggestWidget.selectedForeground"              : "#A78BFA",
+            "editorSuggestWidget.selectedIconForeground"          : "#A78BFA",
+            "editorSuggestWidget.focusHighlightForeground"        : "#A78BFA",
+            "editorSuggestWidgetStatus.foreground"                : "#A78BFA",
 
             // Whitespace
             "editorWhitespace.foreground"                         : "#181E2B",
@@ -2991,174 +3166,6 @@
     ],
 
     //---------------------------------------
-    // Bracket Pair Colorizer - Plugin
-    // URL: https://github.com/CoenraadS/BracketPair
-    //---------------------------------------
-    // "bracketPairColorizer.activeScopeCSS"           : [
-    //     "borderColor : #ff0000",
-    //     "borderStyle : solid",
-    //     "borderWidth : 1px",
-    //     "opacity     : 0.5",
-    // ],
-    // "bracketPairColorizer.scopeLineCSS"             : [
-    //     "borderStyle : solid",
-    //     "borderWidth : 1px",
-    //     "borderColor : #CFD8DC",
-    // ],
-    // "bracketPairColorizer.colorMode"                : "Consecutive",
-    // "bracketPairColorizer.consecutivePairColors"    : [
-    //     "()",
-    //     "[]",
-    //     "{}",
-    //     [
-    //         //"#B2FF59", // Light Green
-    //         //"#FF5252",   // Red
-    //       //"#2196F3",   // Blue
-    //       //"#50FA7B",    // Green Dracula
-    //       //"#2196F3",   // Blue
-    //       //"#50FA7B",    // Green Dracula
-    //       //"#2196F3",   // Blue
-    //         //"#ff0000",
-    //         //"#ff0000",
-    //       //"#A1887F", // Brown 300
-    //       //"#795548", // Brown 500
-    //         "#42A5F5", // Blue
-    //         "#E57373", // Red Soft
-    //         "#50FA7B", // Green Dracula
-    //     ],
-    //     "Red"
-    // ],
-    // "bracketPairColorizer.excludedLanguages"        : [
-    //     "scss",
-    //     "vb"
-    // ],
-    // "bracketPairColorizer.forceIterationColorCycle" : false,
-    // "bracketPairColorizer.forceUniqueOpeningColor"  : false,
-    // "bracketPairColorizer.highlightActiveScope"     : false,
-    // "bracketPairColorizer.independentPairColors"    : [
-    //     [
-    //         "()",
-    //         [
-    //             "Gold",
-    //             "Orchid",
-    //             "LightSkyBlue"
-    //         ],
-    //         "Red"
-    //     ],
-    //     [
-    //         "[]",
-    //         [
-    //             "Gold",
-    //             "Orchid",
-    //             "LightSkyBlue"
-    //         ],
-    //         "Red"
-    //     ],
-    //     [
-    //         "{}",
-    //         [
-    //             "Gold",
-    //             "Orchid",
-    //             "LightSkyBlue"
-    //         ],
-    //         "Red"
-    //     ]
-    // ],
-    // "bracketPairColorizer.rulerPosition"            : "Full",
-    // "bracketPairColorizer.scopeLineRelativePosition": true,
-    // "bracketPairColorizer.showBracketsInGutter"     : true,
-    // "bracketPairColorizer.showBracketsInRuler"      : true,
-    // "bracketPairColorizer.showHorizontalScopeLine"  : true,
-    // "bracketPairColorizer.showVerticalScopeLine"    : true,
-    // "bracketPairColorizer.timeOut"                  : 200,
-
-    // ---------------------------------------
-    // Bracket Pair Colorizer 2 - Plugin
-    // URL: https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
-    // ---------------------------------------
-    // "bracket-pair-colorizer-2.activeScopeCSS"           : [
-    //     "borderColor: #ff0000",
-    //     "borderStyle: solid",
-    //     "borderWidth: 2px",
-    //     "opacity    : 0.5",
-    // ],
-    // "bracket-pair-colorizer-2.colorMode"                :"Consecutive",
-    // "bracket-pair-colorizer-2.colors"                   : [
-    //     "#03A9F4",
-    //     "#FDD835",
-    //     // "Gold",
-    //     // "Orchid",
-    //     // "LightSkyBlue",
-    // ],
-    // "bracket-pair-colorizer-2.excludedLanguages"        : [],
-    // "bracket-pair-colorizer-2.forceIterationColorCycle" : false,
-    // "bracket-pair-colorizer-2.forceUniqueOpeningColor"  : false,
-    // "bracket-pair-colorizer-2.highlightActiveScope"     : false,
-    // "bracket-pair-colorizer-2.rulerPosition"            : "Full",
-    // "bracket-pair-colorizer-2.scopeLineCSS"             : [
-    //     //"borderColor: #455A64",
-    //     //"borderStyle: dotted",
-    //     //"borderWidth: 1px",
-    // ],
-    // "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
-    // "bracket-pair-colorizer-2.showBracketsInGutter"     : true,
-    // "bracket-pair-colorizer-2.showBracketsInRuler"      : true,
-    // "bracket-pair-colorizer-2.showHorizontalScopeLine"  : true,
-    // "bracket-pair-colorizer-2.showVerticalScopeLine"    : true,
-    // "bracket-pair-colorizer-2.unmatchedScopeColor"      : "#ff0000",
-
-    // //---------------------------------------
-    // // Hihglighting RegExes - Plugin
-    // // URL:
-    // //---------------------------------------
-    // // "highlight.regexes": {
-    // //     "(// ?TODO:?)(.*)": [
-    // //         {
-    // //             "backgroundColor"   : "#ffcc00",
-    // //             "color"             : "#1f1f1f",
-    // //             "fontWeight"        : "bold",
-    // //             "overviewRulerColor": "#ffcc00"
-    // //         },
-    // //         {
-    // //             "backgroundColor"   : "#d9ad00",
-    // //             "color"             : "#1f1f1f"
-    // //         }
-    // //     ],
-    // //     "(// ?FIXME:?)(.*)": [
-    // //         {
-    // //             "backgroundColor"   : "#ff0000",
-    // //             "color"             : "#1f1f1f",
-    // //             "fontWeight"        : "bold",
-    // //             "overviewRulerColor": "#ff0000",
-    // //         },
-    // //         {
-    // //             "backgroundColor"   : "#d90000",
-    // //             "color"             : "#1f1f1f",
-    // //         }
-    // //     ],
-    // //     "(// )(@\\w+)": [
-    // //         {},
-    // //         {
-    // //             "color": "#4de0ff",
-    // //         }
-    // //     ]
-    // // },
-    // // "highlight.regexFlags": "gi",
-    // // "highlight.regexes": {
-    // //     "(?<!\\w)(#[a-f0-9]{3,4}|#[a-f0-9]{6}|#[a-f0-9]{8}|rgba?\\s*\\([^)]*?\\)|hsla?\\s*\\([^)]*?\\)|aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyanaqua|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|green|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|tan|teal|thistle|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen)(?!\\w)":
-    // //     [
-    // //         {
-    // //             "borderColor"   : "$1",
-    // //             "borderRadius"  : "1px",
-    // //             "borderStyle"   : "solid",
-    // //             "borderWidth"   : "1px",
-    // //             "color"         : "#F0F4C3",
-    // //             "rangeBehavior" : 1,
-    // //         }
-    // //     ]
-    // // },
-
-    //---------------------------------------
     // Indent Rainbow - Plugin
     // URL:
     //---------------------------------------
@@ -3170,19 +3177,6 @@
         "#181e2a40",
         "#181e2a1c",
         "#181e2a0d",
-
-        // "#26323850",
-        // "#37474F32",
-        // "#455A6429",
-        // "#546E7A26",
-        // "#607D8B23",
-        // "#78909C20",
-        // "#90A4AE17",
-
-        // "#ffff4212",
-        // "#80ff8012",
-        // "#ff80ff12",
-        // "#50eded12",
     ],
     "indentRainbow.errorColor"          : "#7e202099",
     "indentRainbow.excludedLanguages"   : [
@@ -3206,201 +3200,44 @@
     //---------------------------------------
     "pasteAndIndent.selectAfter": true,
 
-    //---------------------------------------
-    // Browser plugin:
-    //---------------------------------------
-    //"browser-preview.startUrl": "http://localhost:3000/",
-    //"browser-preview.startUrl":         // The default start url for new Browser Preview instances
-    //"browser-preview.verbose": false    // Enable verbose logging of messages sent between VS Code and Chrome instance
-    //"browser-preview.chromeExecutable": // The full path to the executable, including the complete filename of the executable
-    //"browser-preview.format":           // Option to set the type of rendering with the support for `jpeg` (default one) and `png` formats
-
-    //---------------------------------------
-    // Raibow CSV - Plugin
-    // URL:
-    //---------------------------------------
-    // "rainbow_csv.autodetect_separators": [
-    //     "\t",
-    //     ",",
-    //     ";",
-    //     "|"
-    // ],
-
-    //---------------------------------------
-    // TODO+ - Plugin
-    // URL:
-    //---------------------------------------
-    // "todo.archive.name"                      : "Archive",                                                   // Name of the special "Archive" section
-    // "todo.archive.project.enabled"           : true,                                                        // Enable the @project tag
-    // "todo.archive.project.separator"         : ".",                                                         // String used for joining multiple projects
-    // "todo.archive.remove.emptyLines"         : 1,                                                           // Remove extra empty lines, keeping no more than `emptyLinesThreshold` consecutive empty lines
-    // "todo.archive.remove.emptyProjects"      : true,                                                        // Remove projects without todos
-    // "todo.archive.sortByDate"                : false,                                                       // Sort lines by finished date
-    // "todo.colors.cancelled"                  : "#f92672",                                                   // Cancelled todo color
-    // "todo.colors.code"                       : "#fd971f",                                                   // Code color
-    // "todo.colors.comment"                    : "#75715e",                                                   // Comment color
-    // "todo.colors.dark"                       : { /* "done": "white", ... */ },                              // Colors for dark themes
-    // "todo.colors.done"                       : "#a6e22e",                                                   // Done todo color
-    // "todo.colors.light"                      : { /* "done": "black", ... */ },                              // Colors for light themes
-    // "todo.colors.project"                    : "#66d9ef",                                                   // Project color
-    // "todo.colors.projectStatistics"          : "#4694a3",                                                   // Project statistics color
-    // "todo.colors.tag"                        : "#e6db74",                                                   // Tag color
-    // "todo.colors.tags.background"            : ["#e54545", "#e59f45", "#e5d145", "#ae81ff"],                // Special tags' background colors
-    // "todo.colors.tags.foreground"            : ["#000000", "#000000", "#000000", "#000000"],                // Special tags' foreground colors
-    // "todo.colors.types"                      : { "TODO": "#ffcc00", "FIXME": "#cc0000", ... },              // Object mapping todo types to their color
-    // "todo.embedded.exclude"                  : ["**/.*", "**/.*/**", ...],                                  // Globs to use for excluding files
-    // "todo.embedded.file.groupByFile"         : true,                                                        // Group embedded todos by file
-    // "todo.embedded.file.groupByRoot"         : true,                                                        // Group embedded todos by workspace root
-    // "todo.embedded.file.groupByType"         : true,                                                        // Group embedded todos by type
-    // "todo.embedded.file.wholeLine"           : true,                                                        // Show the whole line
-    // "todo.embedded.include"                  : ["**/*"],                                                    // Globs to use for including files
-    // "todo.embedded.view.expanded"            : true,                                                        // Start the tree in an expanded state
-    // "todo.embedded.view.groupByFile"         : true,                                                        // Group embedded todos by file
-    // "todo.embedded.view.groupByRoot"         : true,                                                        // Group embedded todos by workspace root
-    // "todo.embedded.view.groupByType"         : true,                                                        // Group embedded todos by type
-    // "todo.embedded.view.icons"               : true,                                                        // Show icons next to todos and types"
-    // "todo.embedded.view.wholeLine"           : false,                                                       // Show the whole line
-    // "todo.embedded.provider"                 : "",                                                          // The provider to use when searching for embedded todos
-    // "todo.embedded.providers.ag.args"        : ["--ignore-case"],                                           // Extra arguments to pass to ag
-    // "todo.embedded.providers.rg.args"        : ["--ignore-case"],                                           // Extra arguments to pass to rg
-    // "todo.embedded.providers.ag.regex"       : "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)", // Regex used by ag, requires double escaping
-    // "todo.embedded.providers.rg.regex"       : "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)", // Regex used by rg, requires double escaping
-    // "todo.embedded.regex"                    : "(?:<!-- *)?(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))",   // Regex used for finding embedded todos, requires double escaping
-    // "todo.embedded.regexFlags"               : "gi",                                                        // Regex flags to use
-    // "todo.file.defaultContent"               : "\nTodo:\n  ☐ Item\n",                                       // New todo files default content
-    // "todo.file.exclude"                      : ["**/.!(todo|todos|task|tasks)/**", ...],                    // Globs to use for excluding files
-    // "todo.file.include"                      : ["**/TODO", ...],                                            // Globs to use for including files
-    // "todo.file.name"                         : "TODO",                                                      // Todo file name. Other supported names are: `*.todo`, `*.todos`, `*.task`, `*.tasks`, `*.taskpaper` and `todolist.txt`
-    // "todo.file.view.expanded"                : true,                                                        // Start the tree in an expanded state
-    // "todo.formatting.enabled"                : true,                                                        // Enable markdown-like formatting
-    // "todo.indentation"                       : "  ",                                                        // String used for indentation
-    // "todo.statistics.project.enabled"        : "global.projects < 100",                                     // Show statistics next to a project, boolean or JS expression
-    // "todo.statistics.project.text"           : "([pending]) [est]",                                         // Template used for rendering the text
-    // "todo.statistics.statusbar.alignment"    : "left",                                                      // Should the item be placed to the left or right?
-    // "todo.statistics.statusbar.color"        : "",                                                          // The foreground color for this item
-    // "todo.statistics.statusbar.command"      : "",                                                          // Command to execute on click
-    // "todo.statistics.statusbar.enabled"      : "global.projects < 100 && project.all > 0",                  // Show statistics in the statusbar, boolean or JS expression
-    // "todo.statistics.statusbar.ignoreArchive": true,                                                        // Ignore the archive when rendering statistics in the statusbar
-    // "todo.statistics.statusbar.priority"     : -1,                                                          // The priority of this item. Higher value means the item should be shown more to the left
-    // "todo.statistics.statusbar.text"         : "$(check) [finished]/[all] ([percentage]%)",                 // Template used for rendering the text
-    // "todo.statistics.statusbar.tooltip"      : "[pending] Pending - [done] Done - [cancelled] Cancelled",   // Template used for rendering the tooltip
-    // "todo.symbols.box"                       : "☐",                                                         // Box symbol
-    // "todo.symbols.cancelled"                 : "✘",                                                         // Cancelled symbol
-    // "todo.symbols.done"                      : "✔",                                                         // Done symbol
-    // "todo.tags.names"                        : ["critical", "high", "low", "today"],                        // Special tags' names
-    // "todo.tags.namesInference"               : true,                                                        // Infer commonly used tags' names
-    // "todo.timekeeping.created.enabled"       : false,                                                       // Enable the @created tag
-    // "todo.timekeeping.created.format"        : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @created
-    // "todo.timekeeping.created.time"          : true,                                                        // Insert the time inside the @created tag
-    // "todo.timekeeping.elapsed.enabled"       : true,                                                        // Enable the @lasted/wasted tag
-    // "todo.timekeeping.elapsed.format"        : "short-compact",                                             // Format used for displaying time diff inside @lasted/waster
-    // "todo.timekeeping.estimate.format"       : "short-compact",                                             // Format used for the `[est]` and `[est-total]` tokens
-    // "todo.timekeeping.finished.enabled"      : true,                                                        // Enable the @done/cancelled tag. It's always enabled if you explicitly start a todo or if you use only 1 symbol
-    // "todo.timekeeping.finished.format"       : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @done/cancelled
-    // "todo.timekeeping.finished.time"         : true,                                                        // Insert the time inside the @done/cancelled tag
-    // "todo.timekeeping.started.format"        : "YY-MM-DD HH:mm",                                            // Format used for displaying time inside @started
-    // "todo.timekeeping.started.time"          : true,                                                        // Insert the time inside the @started tag
-    // "todo.timer.statusbar.alignment"         : "left",                                                      // Should the item be placed to the left or right?
-    // "todo.timer.statusbar.color"             : "",                                                          // The foreground color for this item
-    // "todo.timer.statusbar.enabled"           : true,                                                        // Show a timer for started todos in the statusbar
-    // "todo.timer.statusbar.priority"          : -10,                                                         // The priority of this item. Higher value means the item should be shown more to the left
-
-    //---------------------------------------
-    // TODO Highlight - Plugin
-    // URL:
-    //---------------------------------------
-    // "todohighlight.isEnable": true,
-    // "todohighlight.isCaseSensitive": true,
-    // "todohighlight.keywords": [
-    //     "DEBUG:",
-    //     "REVIEW:",
-    //     {
-    //         "text": "NOTE:",
-    //         "color": "#ff0000",
-    //         "backgroundColor": "yellow",
-    //         "overviewRulerColor": "grey"
-    //     },
-    //     {
-    //         "text": "HACK:",
-    //         "color": "#000",
-    //         "isWholeLine": false,
-    //     },
-    //     {
-    //         "text": "TODO:",
-    //         "color": "red",
-    //         "border": "1px solid red",
-    //         "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-    //         "backgroundColor": "rgba(0,0,0,.2)",
-    //         //other styling properties goes here ...
-    //     }
-    // ],
-    // "todohighlight.keywordsPattern": "TODO:|FIXME:|\\(([^)]+)\\)", //highlight `TODO:`,`FIXME:` or content between parentheses
-    // "todohighlight.defaultStyle": {
-    //     "color": "red",
-    //     "backgroundColor": "#ffab00",
-    //     "overviewRulerColor": "#ffab00",
-    //     "cursor": "pointer",
-    //     "border": "1px solid #eee",
-    //     "borderRadius": "2px",
-    //     "isWholeLine": true,
-    //     //other styling properties goes here ...
-    // },
-    // "todohighlight.include": [
-    //     "**/*.js",
-    //     "**/*.jsx",
-    //     "**/*.ts",
-    //     "**/*.tsx",
-    //     "**/*.html",
-    //     "**/*.php",
-    //     "**/*.css",
-    //     "**/*.scss"
-    // ],
-    // "todohighlight.exclude": [
-    //     "**/node_modules/**",
-    //     "**/bower_components/**",
-    //     "**/dist/**",
-    //     "**/build/**",
-    //     "**/.vscode/**",
-    //     "**/.github/**",
-    //     "**/_output/**",
-    //     "**/*.min.*",
-    //     "**/*.map",
-    //     "**/.next/**"
-    // ],
-    // "todohighlight.maxFilesForSearch": 5120,
-    // "todohighlight.toggleURI": false,
-
-    //---------------------------------------
-    // Twig - Plugin
-    // URL:
-    //---------------------------------------
-    // "twig-language-2.braceLine"       : false,
-    // "twig-language-2.bracePadding"    : false,
-    // "twig-language-2.braceStyle"      : "collapse",
-    // "twig-language-2.braces"          : false,
-    // TODO:
-
-    //TailwindCSS
+    //TailwindCSS Editor Settings
+    // "css.validate": false,
+    "css.validate": true,
     "editor.quickSuggestions": {
         "strings": true
     },
-    "tailwindCSS.files.exclude": [
-        "**/.git/**",
-        "**/node_modules/**",
-        "**/.hg/**"
-    ],
-    "tailwindCSS.colorDecorators": true,
-    "editor.colorDecorators": true,
+    "editor.colorDecorators": false,
+    // TailwindCSS
+    // "tailwindCSS.files.exclude": [
+    //     "**/.git/**",
+    //     "**/node_modules/**",
+    //     "**/.hg/**"
+    // ],
+    // "tailwindCSS.colorDecorators": false,
+    // "tailwindCSS.experimental.classRegex": [
+    //     "`([^`]*)", // `...`
+    //     "\"([^\"]*)", // "..."
+    //     // "tw`([^`]*)",               // tw`...`
+    //     // "tw=\"([^\"]*)",            // <div tw="..." />
+    //     // "tw={\"([^\"}]*)",          // <div tw={"..."} />
+    //     // "tw\\.\\w+`([^`]*)",        // tw.xxx`...`
+    //     // "tw\\(.*?\\)`([^`]*)"       // tw(Component)`...`
+    // ],
+    // "tailwindCSS.includeLanguages": {
+    //     "typescript": "javascript",
+    //     "typescriptreact": "javascript"
+    // },
+    // "tailwindCSS.validate": false,
 
+    "emmet.showExpandedAbbreviation": "never",
 
-    "editor.accessibilitySupport"            : "off",     // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
+    // Other
+    "editor.accessibilitySupport"            : "off",    // Shorten hex colors when possible, e.g.: `#777` instead of `#777777`
+    "editor.bracketPairColorization.enabled" : true,
     "extensions.ignoreRecommendations"       : true,
-    "macColorPicker.defaultColorNotation"    : "hsl",    // Which notation to use when inserting (rather than updating) a color
-    "macColorPicker.lowercaseHexColors"      : true,     // Output hex colors in lowercase, e.g.: `#fff` instead of `#FFF`
-    "macColorPicker.shortHexColors"          : false,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.editor.wrapTabs"              : true,
-    "editor.bracketPairColorization.enabled": true,
+
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
