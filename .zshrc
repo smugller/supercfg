@@ -1,8 +1,7 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -35,32 +34,6 @@ eval "$(rbenv init -)"
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-
-# phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
-
-# START Experimental --------------------
-
-# #libressl
-# export PATH="/usr/local/opt/libressl/bin:$PATH"
-
-# #bison
-# export PATH="/usr/local/opt/bison/bin:$PATH"
-
-# #openssl
-# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
-# # export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-# # export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-
-# # export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
-# # export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include"
-
-# symlink openssl
-# ln -s /usr/local/opt/openssl@1.1/include/openssl /usr/local/include
-
-# END Experimental --------------------
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -128,14 +101,11 @@ eval "$(phpenv init -)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  docker
   dotenv
   git
   osx
   pyenv
-  rake
   rbenv
-  ruby
 )
 
 # User configuration
@@ -166,13 +136,6 @@ plugins=(
 
 
 # Custom settings ==========================================
-
-# Hyper Terminal
-
-# Delete % sign from Hyper Terminal - (This is workaround, in next versions should be fixed)
-setopt PROMPT_CR
-setopt PROMPT_SP
-export PROMPT_EOL_MARK=""
 
 # zplug
 
@@ -247,36 +210,6 @@ function publicip()
   curl -s https://api.ipify.org && echo
 }
 
-#
-# Docker devilbox commands START
-#
-function d-start() {
-  cd $HOME/scripts/devilbox/
-  docker-compose up -d httpd php mysql memcd
-  echo "Docker images started... OK"
-  cd $HOME
-}
-
-function d-stop() {
-  cd $HOME/scripts/devilbox/
-  docker-compose stop
-  docker-compose rm -f
-  echo "Docker images stopped and removed... OK"
-  cd $HOME
-}
-
-function d-gotodev() {
-  cd $HOME/scripts/devilbox/data/www/presta/htdocs/themes/royal-theme/_dev
-}
-
-function d-update-dependencies() {
-  gotodev
-  npx npm-check-updates -u
-}
-#
-# Docker devilbox commands END
-#
-
 # Upgrade everything
 function upgrade-everything()
 {
@@ -305,21 +238,24 @@ alias testcolors2="for code ({000..255}) print -P -- "$code: %F{$code}This is ho
 
 function commands() {
   echo "\033[0;91m ============== ALL COMMANDS AVAILABLE =============="
-  echo "weather [city]"
-  echo "cheatsheet [command]"
-  echo "npm-global-variables"
-  echo "glances"
-  echo "neofetch"
-  echo "localip"
-  echo "publicip"
-  echo "testcolors1"
-  echo "testcolors2"
-  echo "upgrade-everything (omz update)"
-  echo "                   (zplug update)"
-  echo "                   (brew upgrade)"
-  echo "                   (npm install -g npm@latest)"
-  echo "                   (npm install -g npm-check-updates@latest)"
-  echo ".dotfiles"
+  echo "weather [city]         - Check weather"
+  echo "cheatsheet [command]   - cheatsheet online"
+  echo "npm-global-variables   - Check NPM global variables"
+  echo "glances                - Process manager"
+  echo "neofetch               - Hardware summary"
+  echo "localip                - Check local IP"
+  echo "publicip               - Check public IP"
+  echo "alias                  - Check all aliases"
+  echo "zsh_stats              - Get a list of the top 20 commands and how many times they have been run."
+  echo "config [command]       - Manage .dotfiles"
+  echo "testcolors1            - Test colors #1"
+  echo "testcolors2            - Test colors #2"
+  echo "upgrade-everything     - Upgrade all scripts and packages to latest versions:"
+  echo "                       - (omz update)"
+  echo "                       - (zplug update)"
+  echo "                       - (brew upgrade)"
+  echo "                       - (npm install -g npm@latest)"
+  echo "                       - (npm install -g npm-check-updates@latest)"
   echo "\033[0;91m ===================================================="
 }
 
@@ -329,7 +265,6 @@ alias config="/usr/bin/git --git-dir=$HOME/.supercfg/ --work-tree=$HOME"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
