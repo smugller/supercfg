@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "Downloads/backgrounds"
+		},
+		{
+			"path": ".vscode/extensions/smugller-syntax-highlighter"
 		}
 	],
 	"settings": {

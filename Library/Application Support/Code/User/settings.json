@@ -1,11 +1,11 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    //
-    //   Author: Smugller
-    //     Date: 01.05.2020
-    //   GitHub: https://github.com/smugller
-    //  Contact: ?
-    //
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//   Author: Smugller
+//     Date: 01.05.2020
+//   GitHub: https://github.com/smugller
+//  Contact: ?
+//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 {
     // Tokens Experimental
     "editor.semanticTokenColorCustomizations": {
@@ -348,6 +348,7 @@
                     "meta.brace.square.js",
                     "meta.delimiter.comma.js",
                     "punctuation.accessor.js",
+                    "punctuation.accessor.optional.js",
                     "punctuation.definition.block.js",
                     "punctuation.definition.parameters.begin.js",
                     "punctuation.definition.parameters.end.js",
@@ -408,10 +409,6 @@
                 [
                     "entity.name.function.method.js",
                     "meta.object-literal.key.js",
-                    "punctuation.definition.string.begin.js",
-                    "punctuation.definition.string.end.js",
-                    "punctuation.definition.string.template.begin.js",
-                    "punctuation.definition.string.template.end.js",
                     "punctuation.separator.key-value.js",
                     "punctuation.terminator.statement.js",
                     "string.unquoted.js"
@@ -419,6 +416,20 @@
                 "settings":
                 {
                     "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope":
+                [
+                    "punctuation.definition.string.begin.js",
+                    "punctuation.definition.string.end.js",
+                    "punctuation.definition.string.template.begin.js",
+                    "punctuation.definition.string.template.end.js",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFA759",
                     "fontStyle": "bold"
                 }
             },
@@ -743,14 +754,6 @@
                     "meta.object-literal.key.tsx",
                     "punctuation.definition.section.case-statement.ts",
                     "punctuation.definition.section.case-statement.tsx",
-                    "punctuation.definition.string.begin.ts",
-                    "punctuation.definition.string.begin.tsx",
-                    "punctuation.definition.string.end.ts",
-                    "punctuation.definition.string.end.tsx",
-                    "punctuation.definition.string.template.begin.ts",
-                    "punctuation.definition.string.template.begin.tsx",
-                    "punctuation.definition.string.template.end.ts",
-                    "punctuation.definition.string.template.end.tsx",
                     "punctuation.separator.key-value.ts",
                     "punctuation.separator.key-value.tsx",
                     "punctuation.terminator.statement.ts",
@@ -759,6 +762,25 @@
                 "settings":
                 {
                     "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // Decimals
+                "scope":
+                [
+                    "punctuation.definition.string.begin.ts",
+                    "punctuation.definition.string.begin.tsx",
+                    "punctuation.definition.string.end.ts",
+                    "punctuation.definition.string.end.tsx",
+                    "punctuation.definition.string.template.begin.ts",
+                    "punctuation.definition.string.template.begin.tsx",
+                    "punctuation.definition.string.template.end.ts",
+                    "punctuation.definition.string.template.end.tsx",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFA759",
                     "fontStyle": "bold"
                 }
             },
@@ -1107,14 +1129,24 @@
                     "punctuation.definition.map.begin.bracket.round.scss",
                     "punctuation.definition.map.end.bracket.round.css",
                     "punctuation.definition.map.end.bracket.round.scss",
-                    "punctuation.definition.string.begin.css",
-                    "punctuation.definition.string.begin.scss",
-                    "punctuation.definition.string.end.css",
-                    "punctuation.definition.string.end.scss",
                     "punctuation.separator.list.comma.css",
                     "punctuation.separator.list.comma.scss",
                     "support.constant.media.css",
                     "support.constant.media.scss",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope":
+                [
+                    "punctuation.definition.string.begin.css",
+                    "punctuation.definition.string.begin.scss",
+                    "punctuation.definition.string.end.css",
+                    "punctuation.definition.string.end.scss",
                 ],
                 "settings":
                 {
@@ -1379,6 +1411,16 @@
                     "punctuation.support.type.property-name.begin.json.comments",
                     "punctuation.support.type.property-name.end.json",
                     "punctuation.support.type.property-name.end.json.comments",
+                ],
+                "settings":
+                {
+                    "foreground": "#FFFFFF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope":
+                [
                     "punctuation.definition.string.begin.json",
                     "punctuation.definition.string.begin.json.comments",
                     "punctuation.definition.string.end.json",
@@ -1386,7 +1428,7 @@
                 ],
                 "settings":
                 {
-                    "foreground": "#FFFFFF",
+                    "foreground": "#FFA759",
                     "fontStyle": "bold"
                 }
             },
@@ -1615,6 +1657,8 @@
         ]
     },
 
+    // TODO
+
     //---------------------------------------
     // File associations
     //---------------------------------------
@@ -1660,8 +1704,7 @@
     "window.newWindowDimensions": "default",
     "window.title"              : "${dirty} $PATH: ${activeFolderLong}$/ ${separator} ${activeEditorShort} ${dirty}",
     "window.titleBarStyle"      : "custom",
-    "window.titleSeparator"     : " — ",
-    "window.zoomLevel"          : -1.2,
+    "window.titleSeparator": " — ",
     "workbench.fontAliasing"    : "antialiased",
     "workbench.iconTheme"       : "vscode-great-icons",
     "workbench.colorCustomizations": {
@@ -1712,14 +1755,15 @@
             // BASE COLORS
             //
 
-            // FF0000
+            // NEW
+            //
+
+            // STILL UNSTYLED
             "activityBar.dropBackground"                         : "#FF0000",
             "activityBar.dropBorder"                             : "#FF0000",
             "banner.background"                                  : "#FF0000",
             "banner.foreground"                                  : "#FF0000",
             "banner.iconForeground"                              : "#FF0000",
-
-
             "charts.blue"                                        : "#FF0000",
             "charts.foreground"                                  : "#FF0000",
             "charts.green"                                       : "#FF0000",
@@ -1729,10 +1773,6 @@
             "charts.red"                                         : "#FF0000",
             "charts.yellow"                                      : "#FF0000",
             "comments.resolved.border"                           : "#FF0000",
-            "debugConsole.errorForeground"                       : "#FF0000",
-            "debugConsole.infoForeground"                        : "#FF0000",
-            "debugConsole.sourceForeground"                      : "#FF0000",
-            "debugConsole.warningForeground"                     : "#FF0000",
             "debugConsoleInputIcon.foreground"                   : "#FF0000",
             "debugExceptionWidget.background"                    : "#FF0000",
             "debugExceptionWidget.border"                        : "#FF0000",
@@ -1796,24 +1836,18 @@
             "editorCommentsWidget.rangeBorder"                   : "#FF0000",
             "editorCommentsWidget.resolvedBorder"                : "#FF0000",
             "editorCommentsWidget.unresolvedBorder"              : "#FF0000",
-            "editorError.background"                             : "#FF0000", // OK
             "editorGhostText.background"                         : "#FF0000",
             "editorGhostText.border"                             : "#FF0000",
             "editorGhostText.foreground"                         : "#FF0000",
             "editorHint.border"                                  : "#FF0000",
             "editorHint.foreground"                              : "#FF0000",
             "editorHoverWidget.highlightForeground"              : "#FF0000",
-            "editorInfo.background"                              : "#FF0000",
             "editorInlayHint.background"                         : "#FF0000",
             "editorInlayHint.foreground"                         : "#FF0000",
             "editorInlayHint.typeBackground"                     : "#FF0000",
             "editorInlayHint.typeForeground"                     : "#FF0000",
             "editorLightBulb.foreground"                         : "#FF0000",
             "editorLightBulbAutoFix.foreground"                  : "#FF0000",
-            "editorLink.activeForeground"                        : "#FF0000",
-            "editorMarkerNavigationError.headerBackground"       : "#FF0000",
-            "editorMarkerNavigationInfo.headerBackground"        : "#FF0000",
-            "editorMarkerNavigationWarning.headerBackground"     : "#FF0000",
             "editorOverviewRuler.border"                         : "#FF0000",
             "editorOverviewRuler.bracketMatchForeground"         : "#FF0000",
             "editorOverviewRuler.commonContentForeground"        : "#FF0000",
@@ -1829,7 +1863,6 @@
             "editorUnicodeHighlight.border"                      : "#FF0000",
             "editorUnnecessaryCode.border"                       : "#FF0000",
             "editorUnnecessaryCode.opacity"                      : "#FF0000",
-            "editorWarning.background"                           : "#FF0000",
             "extensionSponsorButton.background"                  : "#FF0000",
             "extensionSponsorButton.hoverBackground"             : "#FF0000",
             "gitDecoration.renamedResourceForeground"            : "#FF0000",
@@ -1892,9 +1925,6 @@
             "panelInput.border"                                  : "#FF0000",
             "panelSectionHeader.border"                          : "#FF0000",
             "ports.iconRunningProcessForeground"                 : "#FF0000",
-            "problemsErrorIcon.foreground"                       : "#FF0000",
-            "problemsInfoIcon.foreground"                        : "#FF0000",
-            "problemsWarningIcon.foreground"                     : "#FF0000",
             "scm.providerBorder"                                 : "#FF0000",
             "searchEditor.findMatchBackground"                   : "#FF0000",
             "searchEditor.findMatchBorder"                       : "#FF0000",
@@ -1903,7 +1933,6 @@
             "statusBar.debuggingBackground"                      : "#FF0000",
             "statusBar.debuggingBorder"                          : "#FF0000",
             "statusBar.debuggingForeground"                      : "#FF0000",
-            "statusBar.focusBorder"                              : "#FF0000",
             "statusBarItem.errorBackground"                      : "#FF0000",
             "statusBarItem.errorForeground"                      : "#FF0000",
             "statusBarItem.focusBorder"                          : "#FF0000",
@@ -1911,10 +1940,6 @@
             "statusBarItem.settingsProfilesForeground"           : "#FF0000",
             "statusBarItem.warningBackground"                    : "#FF0000",
             "statusBarItem.warningForeground"                    : "#FF0000",
-            "tab.activeModifiedBorder"                           : "#FF0000",
-            "tab.inactiveModifiedBorder"                         : "#FF0000",
-            "tab.unfocusedActiveModifiedBorder"                  : "#FF0000",
-            "tab.unfocusedInactiveModifiedBorder"                : "#FF0000",
             "terminal.findMatchBackground"                       : "#FF0000",
             "terminal.findMatchBorder"                           : "#FF0000",
             "terminal.findMatchHighlightBackground"              : "#FF0000",
@@ -1942,8 +1967,15 @@
             "walkThrough.embeddedEditorBackground"               : "#FF0000",
 
 
-
+            // WORK IN PROGRESS...
             //
+
+            // READY TO MOVE
+            //
+
+            // STYLED
+            //
+            "activityBar.border"                                 : "#222835",
             "checkbox.foreground"                                : "#222835",
             "commandCenter.activeBackground"                     : "#222835",
             "commandCenter.background"                           : "#222835",
@@ -1951,13 +1983,18 @@
             "editor.background"                                  : "#222835",
             "editorBracketMatch.background"                      : "#222835",
             "editorError.border"                                 : "#222835",
+            "editorGroup.border"                                 : "#222835",
             "editorGroup.dropIntoPromptBackground"               : "#222835",
             "editorGroup.emptyBackground"                        : "#222835",
             "editorGroupHeader.border"                           : "#222835",
             "editorGroupHeader.tabsBorder"                       : "#222835",
             "editorIndentGuide.background"                       : "#222835",
             "editorInfo.border"                                  : "#222835",
+            "editorMarkerNavigationError.headerBackground"       : "#222835",
+            "editorMarkerNavigationInfo.headerBackground"        : "#222835",
+            "editorMarkerNavigationWarning.headerBackground"     : "#222835",
             "editorOverviewRuler.background"                     : "#222835",
+            "editorStickyScroll.background"                      : "#222835",
             "editorWarning.border"                               : "#222835",
             "inputOption.activeBackground"                       : "#222835",
             "inputOption.activeBorder"                           : "#222835",
@@ -1971,21 +2008,23 @@
             "peekViewResult.matchHighlightBackground"            : "#222835",
             "peekViewResult.selectionBackground"                 : "#222835",
             "quickInput.background"                              : "#222835",
+            "quickInputTitle.background"                         : "#222835",
             "scrollbar.shadow"                                   : "#222835",
             "settings.focusedRowBorder"                          : "#222835",
             "sideBar.background"                                 : "#222835",
             "sideBarSectionHeader.border"                        : "#222835",
-            "statusBarItem.hoverBackground"                      : "#222835",
+            "statusBar.border"                                   : "#222835",
             "statusBarItem.compactHoverBackground"               : "#222835",
+            "statusBarItem.hoverBackground"                      : "#222835",
             "tab.activeBackground"                               : "#222835",
             "tab.activeBorder"                                   : "#222835",
+            "tab.border"                                         : "#222835",
             "tab.hoverBackground"                                : "#222835",
             "tab.hoverBorder"                                    : "#222835",
             "tab.unfocusedActiveBackground"                      : "#222835",
             "tab.unfocusedActiveBorder"                          : "#222835",
             "terminal.background"                                : "#222835",
             "toolbar.activeBackground"                           : "#222835",
-            "quickInputTitle.background"                         : "#222835",
             "welcomePage.background"                             : "#222835",
             "activityBar.foreground"                             : "#CFD8DC",
             "activityBar.inactiveForeground"                     : "#CFD8DC",
@@ -1993,6 +2032,7 @@
             "breadcrumb.foreground"                              : "#CFD8DC",
             "button.secondaryHoverBackground"                    : "#CFD8DC",
             "commandCenter.foreground"                           : "#CFD8DC",
+            "debugConsole.infoForeground"                        : "#CFD8DC",
             "descriptionForeground"                              : "#CFD8DC",
             "editor.foreground"                                  : "#CFD8DC",
             "editorHoverWidget.foreground"                       : "#CFD8DC",
@@ -2016,6 +2056,8 @@
             "peekViewResult.fileForeground"                      : "#CFD8DC",
             "peekViewResult.lineForeground"                      : "#CFD8DC",
             "peekViewResult.selectionForeground"                 : "#CFD8DC",
+            "peekViewTitleDescription.foreground"                : "#CFD8DC",
+            "peekViewTitleLabel.foreground"                      : "#CFD8DC",
             "quickInput.foreground"                              : "#CFD8DC",
             "sideBar.foreground"                                 : "#CFD8DC",
             "sideBarTitle.foreground"                            : "#CFD8DC",
@@ -2057,6 +2099,7 @@
             "tab.activeForeground"                               : "#CFD8DC",
             "tab.hoverForeground"                                : "#CFD8DC",
             "tab.inactiveForeground"                             : "#CFD8DC",
+            "tab.inactiveModifiedBorder"                         : "#CFD8DC",
             "tab.unfocusedActiveBorderTop"                       : "#CFD8DC",
             "tab.unfocusedActiveForeground"                      : "#CFD8DC",
             "tab.unfocusedHoverForeground"                       : "#CFD8DC",
@@ -2068,7 +2111,6 @@
             "activityBar.activeBackground"                       : "#181E2B",
             "activityBar.activeFocusBorder"                      : "#181E2B",
             "activityBar.background"                             : "#181E2B",
-            "activityBar.border"                                 : "#181E2B",
             "activityBarBadge.foreground"                        : "#181E2B",
             "badge.foreground"                                   : "#181E2B",
             "breadcrumb.background"                              : "#181E2B",
@@ -2087,13 +2129,14 @@
             "editor.lineHighlightBackground"                     : "#181E2B",
             "editor.lineHighlightBorder"                         : "#181E2B",
             "editor.rangeHighlightBackground"                    : "#181E2B",
-            "editorGroup.border"                                 : "#181E2B",
             "editorGroupHeader.noTabsBackground"                 : "#181E2B",
             "editorGroupHeader.tabsBackground"                   : "#181E2B",
             "editorGutter.background"                            : "#181E2B",
             "editorHoverWidget.background"                       : "#181E2B",
-            "editorHoverWidget.border"                           : "#181E2B",
+            "editorHoverWidget.statusBarBackground"              : "#181E2B",
             "editorInlayHint.parameterForeground"                : "#181E2B",
+            "editorMarkerNavigation.background"                  : "#181E2B",
+            "editorStickyScrollHover.background"                 : "#181E2B",
             "editorSuggestWidget.background"                     : "#181E2B",
             "editorSuggestWidget.border"                         : "#181E2B",
             "editorWhitespace.foreground"                        : "#181E2B",
@@ -2142,13 +2185,11 @@
             "sideBar.border"                                     : "#181E2B",
             "sideBarSectionHeader.background"                    : "#181E2B",
             "statusBar.background"                               : "#181E2B",
-            "statusBar.border"                                   : "#181E2B",
             "statusBar.noFolderBackground"                       : "#181E2B",
             "statusBar.noFolderBorder"                           : "#181E2B",
             "statusBarItem.activeBackground"                     : "#181E2B",
             "statusBarItem.prominentBackground"                  : "#181E2B",
             "statusBarItem.remoteBackground"                     : "#181E2B",
-            "tab.border"                                         : "#181E2B",
             "tab.inactiveBackground"                             : "#181E2B",
             "tab.unfocusedHoverBackground"                       : "#181E2B",
             "tab.unfocusedInactiveBackground"                    : "#181E2B",
@@ -2171,6 +2212,7 @@
             "button.border"                                      : "#FFE15C",
             "button.foreground"                                  : "#FFE15C",
             "button.secondaryBackground"                         : "#FFE15C",
+            "button.separator"                                   : "#FFE15C",
             "checkbox.background"                                : "#FFE15C",
             "checkbox.border"                                    : "#FFE15C",
             "commandCenter.activeForeground"                     : "#FFE15C",
@@ -2186,6 +2228,7 @@
             "editorGutter.deletedBackground"                     : "#FFE15C",
             "editorGutter.foldingControlForeground"              : "#FFE15C",
             "editorLineNumber.activeForeground"                  : "#FFE15C",
+            "editorLink.activeForeground"                        : "#FFE15C",
             "editorOverviewRuler.modifiedForeground"             : "#FFE15C",
             "editorWidget.resizeBorder"                          : "#FFE15C",
             "extensionBadge.remoteBackground"                    : "#FFE15C",
@@ -2217,10 +2260,8 @@
             "panelTitle.activeBorder"                            : "#FFE15C",
             "peekView.border"                                    : "#FFE15C",
             "peekViewResult.background"                          : "#FFE15C",
-            "peekViewTitleDescription.foreground"                : "#FFE15C",
-            "peekViewTitleLabel.foreground"                      : "#FFE15C",
-            "pickerGroup.border"                                 : "#FFE15C",
             "pickerGroup.foreground"                             : "#FFE15C",
+            "problemsInfoIcon.foreground"                        : "#FFE15C",
             "progressBar.background"                             : "#FFE15C",
             "quickInputList.focusForeground"                     : "#FFE15C",
             "quickInputList.focusIconForeground"                 : "#FFE15C",
@@ -2240,7 +2281,9 @@
             "statusBarItem.prominentHoverBackground"             : "#FFE15C",
             "statusBarItem.remoteForeground"                     : "#FFE15C",
             "tab.activeBorderTop"                                : "#FFE15C",
+            "tab.activeModifiedBorder"                           : "#FFE15C",
             "tab.lastPinnedBorder"                               : "#FFE15C",
+            "tab.unfocusedActiveModifiedBorder"                  : "#FFE15C",
             "tab.unfocusedHoverBorder"                           : "#FFE15C",
             "terminal.tab.activeBorder"                          : "#FFE15C",
             "terminalCursor.background"                          : "#FFE15C",
@@ -2252,7 +2295,6 @@
             "toolbar.hoverOutline"                               : "#FFE15C",
             "welcomePage.progress.foreground"                    : "#FFE15C",
             "welcomePage.tileShadow"                             : "#FFE15C",
-            "widget.shadow"                                      : "#FFE15C",
             "debugIcon.startForeground"                          : "#50FA7B",
             "debugToolBar.background"                            : "#50FA7B",
             "diffEditor.insertedLineBackground"                  : "#50FA7B",
@@ -2270,7 +2312,6 @@
             "editorBracketHighlight.foreground6"                 : "#50FA7B",
             "editorGutter.modifiedBackground"                    : "#50FA7B",
             "editorInfo.foreground"                              : "#50FA7B",
-            "editorMarkerNavigationInfo.background"              : "#50FA7B",
             "editorOverviewRuler.addedForeground"                : "#50FA7B",
             "editorOverviewRuler.findMatchForeground"            : "#50FA7B",
             "editorOverviewRuler.infoForeground"                 : "#50FA7B",
@@ -2288,32 +2329,40 @@
             "editor.wordHighlightStrongBackground"               : "#708090",
             "editor.wordHighlightStrongBorder"                   : "#708090",
             "editorGroup.dropBackground"                         : "#708090",
-            "editorHoverWidget.statusBarBackground"              : "#708090",
+            "editorHoverWidget.border"                           : "#708090",
             "editorIndentGuide.activeBackground"                 : "#708090",
+            "editorInfo.background"                              : "#708090",
             "editorLineNumber.foreground"                        : "#708090",
-            "editorMarkerNavigation.background"                  : "#708090",
+            "editorMarkerNavigationInfo.background"              : "#708090",
             "editorSuggestWidget.selectedBackground"             : "#708090",
             "list.dropBackground"                                : "#708090",
             "list.inactiveFocusBackground"                       : "#708090",
+            "listFilterWidget.shadow"                            : "#708090",
             "menu.separatorBackground"                           : "#708090",
             "minimapSlider.activeBackground"                     : "#708090",
             "minimapSlider.background"                           : "#708090",
             "minimapSlider.hoverBackground"                      : "#708090",
             "panelSection.dropBackground"                        : "#708090",
+            "pickerGroup.border"                                 : "#708090",
             "selection.background"                               : "#708090",
             "settings.focusedRowBackground"                      : "#708090",
             "settings.rowHoverBackground"                        : "#708090",
             "sideBar.dropBackground"                             : "#708090",
+            "statusBar.focusBorder"                              : "#708090",
+            "tab.unfocusedInactiveModifiedBorder"                : "#708090",
             "terminal.dropBackground"                            : "#708090",
             "terminal.selectionBackground"                       : "#708090",
             "welcomePage.progress.background"                    : "#708090",
             "welcomePage.tileHoverBackground"                    : "#708090",
+            "widget.shadow"                                      : "#708090",
+            "debugConsole.errorForeground"                       : "#FF5252",
             "diffEditor.removedLineBackground"                   : "#FF5252",
             "diffEditor.removedTextBackground"                   : "#FF5252",
             "diffEditor.removedTextBorder"                       : "#FF5252",
             "diffEditorGutter.removedLineBackground"             : "#FF5252",
             "diffEditorOverview.removedForeground"               : "#FF5252",
             "disabledForeground"                                 : "#FF5252",
+            "editorError.background"                             : "#FF5252",
             "editorError.foreground"                             : "#FF5252",
             "editorMarkerNavigationError.background"             : "#FF5252",
             "editorOverviewRuler.deletedForeground"              : "#FF5252",
@@ -2325,7 +2374,9 @@
             "listFilterWidget.noMatchesOutline"                  : "#FF5252",
             "minimap.errorHighlight"                             : "#FF5252",
             "notificationsErrorIcon.foreground"                  : "#FF5252",
+            "problemsErrorIcon.foreground"                       : "#FF5252",
             "textCodeBlock.background"                           : "#FF5252",
+            "debugConsole.sourceForeground"                      : "#A78BFA",
             "editorSuggestWidget.focusHighlightForeground"       : "#A78BFA",
             "editorSuggestWidget.foreground"                     : "#A78BFA",
             "editorSuggestWidget.highlightForeground"            : "#A78BFA",
@@ -2333,7 +2384,6 @@
             "editorSuggestWidget.selectedIconForeground"         : "#A78BFA",
             "editorSuggestWidgetStatus.foreground"               : "#A78BFA",
             "extensionIcon.preReleaseForeground"                 : "#A78BFA",
-            "editorMarkerNavigationWarning.background"           : "#FFF176",
             "editorOverviewRuler.warningForeground"              : "#FFF176",
             "editorWarning.foreground"                           : "#FFF176",
             "inputValidation.warningForeground"                  : "#FFF176",
@@ -2347,7 +2397,11 @@
             "editorBracketHighlight.foreground3"                 : "#42A5F5",
             "editorBracketHighlight.foreground5"                 : "#42A5F5",
             "tree.indentGuidesStroke"                            : "#42A5F5",
+            "debugConsole.warningForeground"                     : "#FFA759",
             "editorInlayHint.parameterBackground"                : "#FFA759",
+            "editorMarkerNavigationWarning.background"           : "#FFA759",
+            "editorWarning.background"                           : "#FFA759",
+            "problemsWarningIcon.foreground"                     : "#FFA759",
 
             // TERMINAL COLORS
             "terminal.ansiBlack"                                 : "#191E2A",
@@ -2635,5 +2689,6 @@
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
+    "window.zoomLevel": -1,
 
 }
