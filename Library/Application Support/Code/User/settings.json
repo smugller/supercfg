@@ -33,9 +33,9 @@
         // "variable"      : "#FF0000",
 
         "rules": {
-            // "enum": "#FF0000"
-            // "method": "#FF0000"
-            // "enumMember": "#FF0000"
+            // "enum"       : "#FF0000"
+            // "enumMember" : "#FF0000"
+            // "method"     : "#FF0000"
         }
     },
 
@@ -2400,7 +2400,7 @@
             "debugConsole.warningForeground"                     : "#FFA759",
             "editorInlayHint.parameterBackground"                : "#FFA759",
             "editorMarkerNavigationWarning.background"           : "#FFA759",
-            "editorWarning.background"                           : "#FFA759",
+            "editorWarning.background"                           : "#191E2A",
             "problemsWarningIcon.foreground"                     : "#FFA759",
 
             // TERMINAL COLORS
@@ -2560,35 +2560,6 @@
     },
     "emmet.showExpandedAbbreviation": "never",
 
-    //---------------------------------------
-    // TailwindCSS Plugin
-    // URL:
-    //---------------------------------------
-    //
-    // "tailwindCSS.files.exclude": [
-    //     "**/.git/**",
-    //     "**/node_modules/**",
-    //     "**/.hg/**"
-    // ],
-    // "tailwindCSS.colorDecorators": false,
-    // "tailwindCSS.experimental.classRegex": [
-    //     "`([^`]*)", // `...`
-    //     "\"([^\"]*)", // "..."
-    //     // "tw`([^`]*)",               // tw`...`
-    //     // "tw=\"([^\"]*)",            // <div tw="..." />
-    //     // "tw={\"([^\"}]*)",          // <div tw={"..."} />
-    //     // "tw\\.\\w+`([^`]*)",        // tw.xxx`...`
-    //     // "tw\\(.*?\\)`([^`]*)"       // tw(Component)`...`
-    // ],
-    // "tailwindCSS.includeLanguages": {
-    //     "typescript": "javascript",
-    //     "typescriptreact": "javascript"
-    // },
-    // "tailwindCSS.validate": false,
-
-    // Experimental
-    "editor.experimental.stickyScroll.enabled": true,
-
     // Other
     "breadcrumbs.icons"                        : false,
     "breadcrumbs.symbolPath"                   : "off",
@@ -2623,6 +2594,7 @@
     "editor.scrollbar.verticalScrollbarSize"   : 6,
     "editor.smoothScrolling"                   : true,
     "editor.snippetSuggestions"                : "top",
+    "editor.stickyScroll.enabled"              : true,
     "editor.tabSize"                           : 2,
     "editor.wordWrap"                          : "off",
     "editor.wordWrapColumn"                    : 160,
@@ -2631,8 +2603,10 @@
     "explorer.decorations.colors"              : false,
     "extensions.ignoreRecommendations"         : true,
     "security.workspace.trust.untrustedFiles"  : "open",
+    "terminal.integrated.smoothScrolling"      : true,
     "window.autoDetectHighContrast"            : false,
     "window.commandCenter"                     : true,
+    "window.zoomLevel"                         : -2,
     "workbench.editor.autoLockGroups"          : {},
     "workbench.editor.decorations.badges"      : false,
     "workbench.editor.decorations.colors"      : false,
@@ -2642,6 +2616,8 @@
     "workbench.hover.delay"                    : 0,
     "workbench.reduceMotion"                   : "off",
     "workbench.tree.indent"                    : 10,
+
+    "comments.openView": "file",
 
     // Typescript
     "typescript.inlayHints.parameterNames.enabled": "all",
@@ -2680,15 +2656,60 @@
     ],
 
     "cssVariables.lookupFiles": [
-        "**/*.css",
-        "**/*.scss",
-        "**/*.sass",
-        "**/*.less"
+        // "**/*.css",
+        // "**/*.scss",
+        // "**/*.sass",
+        // "**/*.less",
+        "**/*.ts",
+        "**/*.tsx"
     ],
 
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
-    "window.zoomLevel": -1,
+
+    //---------------------------------------
+    // Todo Tree
+    // URL: https://github.com/Gruntfuggly/todo-tree
+    //---------------------------------------
+    "todo-tree.general.enableFileWatcher"  : true,
+    "todo-tree.general.revealBehaviour"    : "end of todo",
+    "todo-tree.highlights.useColourScheme" : true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "INFO",
+        "FIX",
+        "TODO"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "red",
+        "orange",
+        "yellow",
+        "lime",
+    ],
+    "todo-tree.highlights.customHighlight": {
+
+        "BUG": {
+            "foreground" : "#000000",
+            "icon"       : "bug",
+            "type"       : "tag-and-comment",
+        },
+        "INFO": {
+            "foreground" : "#000000",
+            "icon"       : "info",
+            "type"       : "tag-and-comment",
+        },
+        "FIX": {
+            "foreground" : "#000000",
+            "icon"       : "bell",
+            "type"       : "tag-and-comment",
+        },
+        "TODO": {
+            "foreground" : "#000000",
+            "type"       : "tag-and-comment",
+        },
+    },
+
+
 
 }

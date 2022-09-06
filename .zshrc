@@ -247,6 +247,7 @@ function commands() {
   echo "                       - (brew upgrade)"
   echo "                       - (npm install -g npm@latest)"
   echo "                       - (npm install -g npm-check-updates@latest)"
+  echo "ncu -i --format group  - Group packages to update"
   echo "\033[0;91m ===================================================="
 }
 

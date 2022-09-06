@@ -2,27 +2,6 @@
 	"folders": [
 		{
 			"path": "scripts/abmundo"
-		},
-		{
-			"path": "scripts/excell"
-		},
-		{
-			"path": "scripts/sap_excell_integration"
-		},
-		{
-			"path": "scripts/sbnext/sbnext"
-		},
-		{
-			"path": "Downloads/useful-custom-react-hooks-main"
-		},
-		{
-			"path": "Downloads/Adam Wathan - Tailwind UI (Application UI + Marketing) Updated 10-2021/adamwathanss-tuibeta"
-		},
-		{
-			"path": "Downloads/backgrounds"
-		},
-		{
-			"path": ".vscode/extensions/smugller-syntax-highlighter"
 		}
 	],
 	"settings": {
